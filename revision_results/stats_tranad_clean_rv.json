@@ -1,0 +1,37 @@
+{
+  "comparison": "HiT-IDS vs TranAD",
+  "metric": "binary_f1",
+  "k_folds": 5,
+  "hit_ids_per_fold": [
+    0.9933339977838621,
+    0.9928311433362351,
+    0.993404018510925,
+    0.9925159058908759,
+    0.9919967190063276
+  ],
+  "baseline_per_fold": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "hit_ids_mean": 0.9928163569056452,
+  "hit_ids_std": 0.0005245176790012832,
+  "baseline_mean": 0.0,
+  "baseline_std": 0.0,
+  "delta_mean": 0.9928163569056452,
+  "delta_std": 0.0005864285928236416,
+  "delta_95ci": [
+    0.9920882096344188,
+    0.9935445041768716
+  ],
+  "paired_t_test": {
+    "t_statistic": 3785.6354386225225,
+    "p_value_two_sided": 2.9214327544693826e-14,
+    "p_value_one_sided": 1.4607163772346913e-14,
+    "significant_at_005": true
+  },
+  "cohens_d": 2394.246075419546,
+  "effect_size": "large"
+}

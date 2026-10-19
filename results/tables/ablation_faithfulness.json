@@ -1,0 +1,275 @@
+{
+  "n_samples": 498,
+  "n_features": 61,
+  "methods": [
+    "hierarchical",
+    "flat",
+    "random"
+  ],
+  "results": {
+    "hierarchical": {
+      "deletion_auc": {
+        "mean": 0.338901800953259,
+        "std": 0.21903840091592536
+      },
+      "insertion_auc": {
+        "mean": 0.7122174229196097,
+        "std": 0.1722038325582124
+      },
+      "aopc": {
+        "mean": 0.6078839608453855,
+        "std": 0.23003821106284053
+      },
+      "comprehensiveness_k5": {
+        "mean": 0.11707769240903478,
+        "std": 0.23697950851928765
+      },
+      "sufficiency_k5": {
+        "mean": 0.4042367839177764,
+        "std": 0.34307234727779196
+      },
+      "comprehensiveness_k10": {
+        "mean": 0.34931497423943264,
+        "std": 0.35275372496765417
+      },
+      "sufficiency_k10": {
+        "mean": 0.2756862284804519,
+        "std": 0.32981659878640057
+      },
+      "comprehensiveness_k15": {
+        "mean": 0.5252461300463412,
+        "std": 0.38074030049161717
+      },
+      "sufficiency_k15": {
+        "mean": 0.15853133062312164,
+        "std": 0.23063165682872033
+      },
+      "comprehensiveness_k20": {
+        "mean": 0.7661862979291463,
+        "std": 0.26086796168227666
+      },
+      "sufficiency_k20": {
+        "mean": 0.2365972712714539,
+        "std": 0.3591765401889826
+      }
+    },
+    "flat": {
+      "deletion_auc": {
+        "mean": 0.3860403579155294,
+        "std": 0.2056330692655462
+      },
+      "insertion_auc": {
+        "mean": 0.6726190009192717,
+        "std": 0.20026709813739405
+      },
+      "aopc": {
+        "mean": 0.560961638228504,
+        "std": 0.2157525903377958
+      },
+      "comprehensiveness_k5": {
+        "mean": 0.04458346574784193,
+        "std": 0.1622079607067544
+      },
+      "sufficiency_k5": {
+        "mean": 0.40216913519531905,
+        "std": 0.32733793452051985
+      },
+      "comprehensiveness_k10": {
+        "mean": 0.22937518199082899,
+        "std": 0.35154604522320654
+      },
+      "sufficiency_k10": {
+        "mean": 0.2011639888989309,
+        "std": 0.2980872071489487
+      },
+      "comprehensiveness_k15": {
+        "mean": 0.4993726129467827,
+        "std": 0.327888828545957
+      },
+      "sufficiency_k15": {
+        "mean": 0.33860167521556994,
+        "std": 0.3515667885573683
+      },
+      "comprehensiveness_k20": {
+        "mean": 0.5160181689965371,
+        "std": 0.3384546408661507
+      },
+      "sufficiency_k20": {
+        "mean": 0.3257783722678521,
+        "std": 0.3707698382501647
+      }
+    },
+    "random": {
+      "deletion_auc": {
+        "mean": 0.5642702671429694,
+        "std": 0.20718976381073212
+      },
+      "insertion_auc": {
+        "mean": 0.571029245810084,
+        "std": 0.1982505867304627
+      },
+      "aopc": {
+        "mean": 0.3827265611848089,
+        "std": 0.20946845394049818
+      },
+      "comprehensiveness_k5": {
+        "mean": 0.06378467688075151,
+        "std": 0.18752571502221502
+      },
+      "sufficiency_k5": {
+        "mean": 0.5894240887478428,
+        "std": 0.3717439118618209
+      },
+      "comprehensiveness_k10": {
+        "mean": 0.14379712876052142,
+        "std": 0.27675748264195743
+      },
+      "sufficiency_k10": {
+        "mean": 0.5781461009101186,
+        "std": 0.36483095201836774
+      },
+      "comprehensiveness_k15": {
+        "mean": 0.2135910833035652,
+        "std": 0.32278623332924716
+      },
+      "sufficiency_k15": {
+        "mean": 0.5374325137706024,
+        "std": 0.36693086504757483
+      },
+      "comprehensiveness_k20": {
+        "mean": 0.29374805921324,
+        "std": 0.35761682453745736
+      },
+      "sufficiency_k20": {
+        "mean": 0.5048171244229724,
+        "std": 0.3717157842841453
+      }
+    }
+  },
+  "statistical_tests": [
+    {
+      "metric": "deletion_auc",
+      "hier_mean": 0.338901800953259,
+      "flat_mean": 0.3860403579155294,
+      "random_mean": 0.5642702671429694,
+      "delta_hier_flat": -0.04713855696227037,
+      "p_hier_vs_flat": 2.7521912038400364e-38,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 1.9358010607647168e-59,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "insertion_auc",
+      "hier_mean": 0.7122174229196097,
+      "flat_mean": 0.6726190009192717,
+      "random_mean": 0.571029245810084,
+      "delta_hier_flat": 0.03959842200033792,
+      "p_hier_vs_flat": 3.8149399904055647e-35,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 4.542990070367582e-34,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "aopc",
+      "hier_mean": 0.6078839608453855,
+      "flat_mean": 0.560961638228504,
+      "random_mean": 0.3827265611848089,
+      "delta_hier_flat": 0.04692232261688156,
+      "p_hier_vs_flat": 1.8108910788536822e-37,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 4.659643139721988e-59,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "comprehensiveness_k5",
+      "hier_mean": 0.11707769240903478,
+      "flat_mean": 0.04458346574784193,
+      "random_mean": 0.06378467688075151,
+      "delta_hier_flat": 0.07249422666119285,
+      "p_hier_vs_flat": 3.851137872144222e-17,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 7.437989441023309e-05,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "sufficiency_k5",
+      "hier_mean": 0.4042367839177764,
+      "flat_mean": 0.40216913519531905,
+      "random_mean": 0.5894240887478428,
+      "delta_hier_flat": 0.002067648722457349,
+      "p_hier_vs_flat": 0.5488736180590033,
+      "sig_hier_vs_flat": false,
+      "p_hier_vs_random": 1.6267818472875256e-20,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "comprehensiveness_k10",
+      "hier_mean": 0.34931497423943264,
+      "flat_mean": 0.22937518199082899,
+      "random_mean": 0.14379712876052142,
+      "delta_hier_flat": 0.11993979224860365,
+      "p_hier_vs_flat": 2.060060951652689e-25,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 8.755363227763083e-23,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "sufficiency_k10",
+      "hier_mean": 0.2756862284804519,
+      "flat_mean": 0.2011639888989309,
+      "random_mean": 0.5781461009101186,
+      "delta_hier_flat": 0.07452223958152099,
+      "p_hier_vs_flat": 0.999994903910801,
+      "sig_hier_vs_flat": false,
+      "p_hier_vs_random": 6.727859693761474e-38,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "comprehensiveness_k15",
+      "hier_mean": 0.5252461300463412,
+      "flat_mean": 0.4993726129467827,
+      "random_mean": 0.2135910833035652,
+      "delta_hier_flat": 0.02587351709955854,
+      "p_hier_vs_flat": 0.09014189313261875,
+      "sig_hier_vs_flat": false,
+      "p_hier_vs_random": 2.2705606341645934e-33,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "sufficiency_k15",
+      "hier_mean": 0.15853133062312164,
+      "flat_mean": 0.33860167521556994,
+      "random_mean": 0.5374325137706024,
+      "delta_hier_flat": -0.1800703445924483,
+      "p_hier_vs_flat": 3.493887589972992e-42,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 1.0564436343131002e-66,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "comprehensiveness_k20",
+      "hier_mean": 0.7661862979291463,
+      "flat_mean": 0.5160181689965371,
+      "random_mean": 0.29374805921324,
+      "delta_hier_flat": 0.2501681289326092,
+      "p_hier_vs_flat": 1.2002490229208044e-39,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 3.580115064188258e-83,
+      "sig_hier_vs_random": true
+    },
+    {
+      "metric": "sufficiency_k20",
+      "hier_mean": 0.2365972712714539,
+      "flat_mean": 0.3257783722678521,
+      "random_mean": 0.5048171244229724,
+      "delta_hier_flat": -0.0891811009963982,
+      "p_hier_vs_flat": 3.1680443210357007e-13,
+      "sig_hier_vs_flat": true,
+      "p_hier_vs_random": 4.0413067459459574e-33,
+      "sig_hier_vs_random": true
+    }
+  ],
+  "n_significant_hier_vs_flat": 8,
+  "n_significant_hier_vs_random": 11,
+  "ablation_f1_comparison": {}
+}

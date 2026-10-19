@@ -1,0 +1,236 @@
+{
+  "dataset": "NSM-IDS-2026",
+  "k_folds": 4,
+  "groups": [
+    "temporal",
+    "volume",
+    "protocol",
+    "behavioral"
+  ],
+  "methods": {
+    "HiT-IDS rollout": {
+      "interfold_rho_global": {
+        "mean": 0.7792481288596717,
+        "min": 0.7317510458464953,
+        "max": 0.8732177921967045
+      },
+      "per_class_rho_mean": 0.6852579122279455,
+      "dominant_agreement_mean": 0.7777777777777778,
+      "per_class": {
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.7423518028401491,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0
+        },
+        "DoS SYN": {
+          "interfold_rho_mean": 0.7113748256922507,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.75
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.636500754147813,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.75
+        },
+        "DoS Slowloris": {
+          "interfold_rho_mean": 0.7187597825777625,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.6668231879108681,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.75
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.685292694726657,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.5
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.7613193317965793,
+          "dominant_group": "behavioral",
+          "dominant_agreement": 0.75
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.6174620791712911,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.6274367511881386,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        }
+      }
+    },
+    "HiT-IDS GradientSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.7421886126064542,
+        "min": 0.6107835597709989,
+        "max": 0.8292745449884645
+      },
+      "per_class_rho_mean": 0.6791294413271683,
+      "dominant_agreement_mean": 0.8055555555555556,
+      "per_class": {
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.6539064057649037,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "DoS SYN": {
+          "interfold_rho_mean": 0.6774758608903699,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.6706969722863083,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "DoS Slowloris": {
+          "interfold_rho_mean": 0.6106696288700902,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.6552450938505796,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.75
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.651884132273776,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.6974564926372157,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.5
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.74862570850779,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.7462046768634822,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        }
+      }
+    },
+    "XGBoost TreeSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.9142591060104907,
+        "min": 0.8811221729924036,
+        "max": 0.9554635203720874
+      },
+      "per_class_rho_mean": 0.7886207380901468,
+      "dominant_agreement_mean": 1.0,
+      "per_class": {
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.8078985179163339,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0
+        },
+        "DoS SYN": {
+          "interfold_rho_mean": 0.7833814811283251,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.8658364171023138,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0
+        },
+        "DoS Slowloris": {
+          "interfold_rho_mean": 0.8214946088949421,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.5779518821607612,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.8432539697144495,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.8754785746799977,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.6723295040109512,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.849961687203247,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        }
+      }
+    },
+    "Random Forest TreeSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.9695339736748488,
+        "min": 0.9611526147278546,
+        "max": 0.9789114194236925
+      },
+      "per_class_rho_mean": 0.9376256291079227,
+      "dominant_agreement_mean": 0.8333333333333334,
+      "per_class": {
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.9623763785129847,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "DoS SYN": {
+          "interfold_rho_mean": 0.896732211878192,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.9367342582710778,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "DoS Slowloris": {
+          "interfold_rho_mean": 0.9522447527570259,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.5
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.9344701840729703,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.9596584845250798,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.9243400924937744,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.9129352673778426,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.9591390320823573,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0
+        }
+      }
+    }
+  }
+}

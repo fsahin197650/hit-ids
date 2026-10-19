@@ -1,0 +1,562 @@
+{
+  "tag": "clean_rv",
+  "k_folds": 5,
+  "groups": [
+    "temporal",
+    "volume",
+    "protocol",
+    "behavioral"
+  ],
+  "methods": {
+    "HiT-IDS rollout": {
+      "interfold_rho_global": {
+        "mean": 0.666060285563194,
+        "min": 0.5717080909571655,
+        "max": 0.736753040719196
+      },
+      "per_class_rho_mean": 0.563997003349198,
+      "dominant_agreement_mean": 0.6555555555555556,
+      "per_class": {
+        "Bot": {
+          "interfold_rho_mean": 0.548937070333157,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.2518,
+            "volume": 0.1815,
+            "protocol": 0.3449,
+            "behavioral": 0.2218
+          }
+        },
+        "DDoS": {
+          "interfold_rho_mean": 0.6506980433632997,
+          "dominant_group": "behavioral",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.1341,
+            "volume": 0.2888,
+            "protocol": 0.2701,
+            "behavioral": 0.307
+          }
+        },
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.563685880486515,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.323,
+            "volume": 0.3212,
+            "protocol": 0.2057,
+            "behavioral": 0.15
+          }
+        },
+        "DoS Hulk": {
+          "interfold_rho_mean": 0.6424219989423584,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.1732,
+            "volume": 0.3412,
+            "protocol": 0.3314,
+            "behavioral": 0.1542
+          }
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.4761713379164463,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.3365,
+            "volume": 0.2707,
+            "protocol": 0.155,
+            "behavioral": 0.2379
+          }
+        },
+        "DoS slowloris": {
+          "interfold_rho_mean": 0.5658117398202009,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.4,
+          "group_mean": {
+            "temporal": 0.2644,
+            "volume": 0.2619,
+            "protocol": 0.266,
+            "behavioral": 0.2077
+          }
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.6052829190904283,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.1747,
+            "volume": 0.2629,
+            "protocol": 0.3387,
+            "behavioral": 0.2237
+          }
+        },
+        "Heartbleed": {
+          "interfold_rho_mean": 0.5652035959809624,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1244,
+            "volume": 0.4433,
+            "protocol": 0.224,
+            "behavioral": 0.2083
+          }
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.48667371760973016,
+          "dominant_group": "behavioral",
+          "dominant_agreement": 0.6666666666666666,
+          "group_mean": {
+            "temporal": 0.155,
+            "volume": 0.1813,
+            "protocol": 0.286,
+            "behavioral": 0.3777
+          }
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.48049709148598624,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.4,
+          "group_mean": {
+            "temporal": 0.222,
+            "volume": 0.2622,
+            "protocol": 0.2878,
+            "behavioral": 0.2279
+          }
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.6169751454257005,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.1215,
+            "volume": 0.3808,
+            "protocol": 0.293,
+            "behavioral": 0.2046
+          }
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.5656054997355895,
+          "dominant_group": "temporal",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.3985,
+            "volume": 0.1945,
+            "protocol": 0.2323,
+            "behavioral": 0.1747
+          }
+        }
+      }
+    },
+    "HiT-IDS GradientSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.7193632830058965,
+        "min": 0.6628149871757582,
+        "max": 0.807980115814802
+      },
+      "per_class_rho_mean": 0.7081445395448354,
+      "dominant_agreement_mean": 0.8090909090909091,
+      "per_class": {
+        "Bot": {
+          "interfold_rho_mean": 0.6663390049010297,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.1686,
+            "volume": 0.2541,
+            "protocol": 0.4425,
+            "behavioral": 0.1348
+          }
+        },
+        "DDoS": {
+          "interfold_rho_mean": 0.7399499442338386,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.0782,
+            "volume": 0.4739,
+            "protocol": 0.208,
+            "behavioral": 0.2398
+          }
+        },
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.7256381158656395,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.2683,
+            "volume": 0.3488,
+            "protocol": 0.1848,
+            "behavioral": 0.1981
+          }
+        },
+        "DoS Hulk": {
+          "interfold_rho_mean": 0.7011168081475448,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.172,
+            "volume": 0.5095,
+            "protocol": 0.2082,
+            "behavioral": 0.1103
+          }
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.7230862793833788,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.201,
+            "volume": 0.4818,
+            "protocol": 0.1426,
+            "behavioral": 0.1746
+          }
+        },
+        "DoS slowloris": {
+          "interfold_rho_mean": 0.7192213437438381,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1842,
+            "volume": 0.5133,
+            "protocol": 0.1877,
+            "behavioral": 0.1148
+          }
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.6984552682162171,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.1197,
+            "volume": 0.3872,
+            "protocol": 0.2917,
+            "behavioral": 0.2014
+          }
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.6781256610958325,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.5,
+          "group_mean": {
+            "temporal": 0.0944,
+            "volume": 0.3141,
+            "protocol": 0.3336,
+            "behavioral": 0.2579
+          }
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.7475242119723656,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.1509,
+            "volume": 0.3896,
+            "protocol": 0.3082,
+            "behavioral": 0.1513
+          }
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.7389672977725159,
+          "dominant_group": "protocol",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.0936,
+            "volume": 0.4052,
+            "protocol": 0.3907,
+            "behavioral": 0.1106
+          }
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.6511659996609884,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.8,
+          "group_mean": {
+            "temporal": 0.3057,
+            "volume": 0.3942,
+            "protocol": 0.0997,
+            "behavioral": 0.2004
+          }
+        }
+      }
+    },
+    "XGBoost TreeSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.9410461180452719,
+        "min": 0.8848106621535858,
+        "max": 0.9665221070446373
+      },
+      "per_class_rho_mean": 0.8107968100351389,
+      "dominant_agreement_mean": 0.9333333333333332,
+      "per_class": {
+        "Bot": {
+          "interfold_rho_mean": 0.8299135401450343,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2571,
+            "volume": 0.2146,
+            "protocol": 0.4963,
+            "behavioral": 0.032
+          }
+        },
+        "DDoS": {
+          "interfold_rho_mean": 0.8692616113979847,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1188,
+            "volume": 0.4412,
+            "protocol": 0.1526,
+            "behavioral": 0.2874
+          }
+        },
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.8894890224530301,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.4722,
+            "volume": 0.376,
+            "protocol": 0.0793,
+            "behavioral": 0.0725
+          }
+        },
+        "DoS Hulk": {
+          "interfold_rho_mean": 0.9147020671021997,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.5076,
+            "volume": 0.2641,
+            "protocol": 0.2251,
+            "behavioral": 0.0032
+          }
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.86477731865545,
+          "dominant_group": "temporal",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.6666,
+            "volume": 0.2107,
+            "protocol": 0.07,
+            "behavioral": 0.0527
+          }
+        },
+        "DoS slowloris": {
+          "interfold_rho_mean": 0.8792699923683462,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.434,
+            "volume": 0.4262,
+            "protocol": 0.0722,
+            "behavioral": 0.0676
+          }
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.7374891584906986,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.0814,
+            "volume": 0.0647,
+            "protocol": 0.8252,
+            "behavioral": 0.0287
+          }
+        },
+        "Heartbleed": {
+          "interfold_rho_mean": 0.5305460732944663,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.0217,
+            "volume": 0.9736,
+            "protocol": 0.004,
+            "behavioral": 0.0008
+          }
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.593823577394763,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2254,
+            "volume": 0.4288,
+            "protocol": 0.242,
+            "behavioral": 0.1038
+          }
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.9233380881915328,
+          "dominant_group": "volume",
+          "dominant_agreement": 0.6,
+          "group_mean": {
+            "temporal": 0.3713,
+            "volume": 0.3708,
+            "protocol": 0.2104,
+            "behavioral": 0.0476
+          }
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.7979771101616585,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.0498,
+            "volume": 0.1568,
+            "protocol": 0.7798,
+            "behavioral": 0.0136
+          }
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.8989741607665028,
+          "dominant_group": "protocol",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2728,
+            "volume": 0.1212,
+            "protocol": 0.5605,
+            "behavioral": 0.0455
+          }
+        }
+      }
+    },
+    "Random Forest TreeSHAP": {
+      "interfold_rho_global": {
+        "mean": 0.9764727657324166,
+        "min": 0.9676361713379164,
+        "max": 0.9805922792173453
+      },
+      "per_class_rho_mean": 0.941726419495264,
+      "dominant_agreement_mean": 1.0,
+      "per_class": {
+        "Bot": {
+          "interfold_rho_mean": 0.9302452497756357,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2668,
+            "volume": 0.4692,
+            "protocol": 0.1772,
+            "behavioral": 0.0868
+          }
+        },
+        "DDoS": {
+          "interfold_rho_mean": 0.9775774081810731,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1054,
+            "volume": 0.615,
+            "protocol": 0.1452,
+            "behavioral": 0.1343
+          }
+        },
+        "DoS GoldenEye": {
+          "interfold_rho_mean": 0.9381564196384586,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2678,
+            "volume": 0.5387,
+            "protocol": 0.1102,
+            "behavioral": 0.0832
+          }
+        },
+        "DoS Hulk": {
+          "interfold_rho_mean": 0.9658117398202007,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2042,
+            "volume": 0.5977,
+            "protocol": 0.1212,
+            "behavioral": 0.0768
+          }
+        },
+        "DoS Slowhttptest": {
+          "interfold_rho_mean": 0.9401676406039291,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.3566,
+            "volume": 0.4641,
+            "protocol": 0.1046,
+            "behavioral": 0.0748
+          }
+        },
+        "DoS slowloris": {
+          "interfold_rho_mean": 0.9407318040689425,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.3173,
+            "volume": 0.4929,
+            "protocol": 0.1112,
+            "behavioral": 0.0786
+          }
+        },
+        "FTP-Patator": {
+          "interfold_rho_mean": 0.9612132186528797,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1304,
+            "volume": 0.4232,
+            "protocol": 0.3888,
+            "behavioral": 0.0577
+          }
+        },
+        "Infiltration": {
+          "interfold_rho_mean": 0.8669451862820277,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.1022,
+            "volume": 0.6113,
+            "protocol": 0.1359,
+            "behavioral": 0.1506
+          }
+        },
+        "PortScan": {
+          "interfold_rho_mean": 0.9687465011031575,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2084,
+            "volume": 0.6182,
+            "protocol": 0.115,
+            "behavioral": 0.0584
+          }
+        },
+        "SSH-Patator": {
+          "interfold_rho_mean": 0.9368551215003966,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.0881,
+            "volume": 0.5694,
+            "protocol": 0.2247,
+            "behavioral": 0.1177
+          }
+        },
+        "Web Attack": {
+          "interfold_rho_mean": 0.9325403248212026,
+          "dominant_group": "volume",
+          "dominant_agreement": 1.0,
+          "group_mean": {
+            "temporal": 0.2431,
+            "volume": 0.4167,
+            "protocol": 0.2754,
+            "behavioral": 0.0648
+          }
+        }
+      }
+    }
+  }
+}

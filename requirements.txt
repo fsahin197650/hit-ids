@@ -1,0 +1,37 @@
+# HiT-IDS: Hierarchical Transformer with Intrinsic Explainability for Network IDS
+# Core
+torch>=2.0
+torchvision
+numpy
+pandas
+scikit-learn
+
+# Class imbalance
+imbalanced-learn
+
+# XAI
+shap
+captum
+
+# Visualization
+matplotlib
+seaborn
+
+# Statistics
+scipy
+
+# Experiment tracking
+wandb
+
+# Configuration
+pyyaml
+
+# Progress bars
+tqdm
+
+# Baseline models
+xgboost
+
+# Model profiling
+torchinfo
+thop

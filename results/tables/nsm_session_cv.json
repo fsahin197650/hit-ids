@@ -1,0 +1,6224 @@
+{
+  "dataset": "NSM-IDS-2026 v1.2 (Zenodo 23392184)",
+  "protocol": {
+    "folds": [
+      [
+        3,
+        7,
+        11
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        1,
+        5,
+        9
+      ],
+      [
+        2,
+        6,
+        10
+      ]
+    ],
+    "validation": "one training session per fold",
+    "dedup": "exact duplicates removed",
+    "split_fragments": "excluded (split_fragment=1)",
+    "features": [
+      "Flow Duration",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Fwd Packets/s",
+      "Bwd Packets/s",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "Packet Length Variance",
+      "Max Packet Length",
+      "Min Packet Length",
+      "Fwd Header Length",
+      "Bwd Header Length",
+      "Average Packet Size",
+      "Destination Port",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count",
+      "CWE Flag Count",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Down/Up Ratio",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward"
+    ],
+    "groups": {
+      "temporal": 15,
+      "volume": 24,
+      "protocol": 10,
+      "behavioral": 3
+    },
+    "resampling": "adaptive SMOTE (target 5000) + BENIGN cap, training sessions only",
+    "threshold": "validation-calibrated for HiT-IDS and every baseline",
+    "smoke": false
+  },
+  "class_names": [
+    "BENIGN",
+    "DoS GoldenEye",
+    "DoS SYN",
+    "DoS Slowhttptest",
+    "DoS Slowloris",
+    "FTP-Patator",
+    "Infiltration",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack"
+  ],
+  "k_folds": 4,
+  "folds": [
+    {
+      "fold": 0,
+      "test_sessions": [
+        3,
+        7,
+        11
+      ],
+      "val_session": 0,
+      "n_train_real": 64538,
+      "n_val_real": 8719,
+      "n_test_real": 23969,
+      "test_class_counts": {
+        "BENIGN": 10602,
+        "DoS GoldenEye": 4470,
+        "DoS SYN": 158,
+        "DoS Slowhttptest": 1547,
+        "DoS Slowloris": 1587,
+        "FTP-Patator": 24,
+        "Infiltration": 1027,
+        "PortScan": 2978,
+        "SSH-Patator": 334,
+        "Web Attack": 1242
+      },
+      "n_train_after_smote": 83390
+    },
+    {
+      "fold": 1,
+      "test_sessions": [
+        0,
+        4,
+        8
+      ],
+      "val_session": 2,
+      "n_train_real": 64113,
+      "n_val_real": 8168,
+      "n_test_real": 24945,
+      "test_class_counts": {
+        "BENIGN": 11110,
+        "DoS GoldenEye": 4697,
+        "DoS SYN": 275,
+        "DoS Slowhttptest": 1700,
+        "DoS Slowloris": 1562,
+        "FTP-Patator": 24,
+        "Infiltration": 1026,
+        "PortScan": 2983,
+        "SSH-Patator": 334,
+        "Web Attack": 1234
+      },
+      "n_train_after_smote": 83126
+    },
+    {
+      "fold": 2,
+      "test_sessions": [
+        1,
+        5,
+        9
+      ],
+      "val_session": 3,
+      "n_train_real": 64755,
+      "n_val_real": 8042,
+      "n_test_real": 24429,
+      "test_class_counts": {
+        "BENIGN": 10723,
+        "DoS GoldenEye": 4676,
+        "DoS SYN": 223,
+        "DoS Slowhttptest": 1462,
+        "DoS Slowloris": 1746,
+        "FTP-Patator": 24,
+        "Infiltration": 1008,
+        "PortScan": 2968,
+        "SSH-Patator": 357,
+        "Web Attack": 1242
+      },
+      "n_train_after_smote": 83511
+    },
+    {
+      "fold": 3,
+      "test_sessions": [
+        2,
+        6,
+        10
+      ],
+      "val_session": 4,
+      "n_train_real": 65187,
+      "n_val_real": 8156,
+      "n_test_real": 23883,
+      "test_class_counts": {
+        "BENIGN": 10115,
+        "DoS GoldenEye": 4677,
+        "DoS SYN": 145,
+        "DoS Slowhttptest": 1566,
+        "DoS Slowloris": 1786,
+        "FTP-Patator": 24,
+        "Infiltration": 1012,
+        "PortScan": 2976,
+        "SSH-Patator": 343,
+        "Web Attack": 1239
+      },
+      "n_train_after_smote": 84100
+    }
+  ],
+  "summary": {
+    "HiT-IDS (Cascade)": {
+      "mean_macro_f1": 0.9830826245707901,
+      "std_macro_f1": 0.004999358243601581,
+      "per_fold_f1": [
+        0.9876332640250658,
+        0.9849131367101169,
+        0.9851625178909729,
+        0.9746215796570047
+      ],
+      "mean_macro_f1_argmax": 0.9830659615300156,
+      "mean_accuracy": 0.9918418954255441,
+      "binary": {
+        "f1": {
+          "mean": 0.9993591871840339,
+          "std": 0.0002232187529519134
+        },
+        "precision": {
+          "mean": 0.9996877306236792,
+          "std": 0.0001756767796639887
+        },
+        "recall": {
+          "mean": 0.9990309962775934,
+          "std": 0.0004529696864917466
+        },
+        "fpr": {
+          "mean": 0.000406938482888502,
+          "std": 0.0002362085126869884
+        },
+        "roc_auc": {
+          "mean": 0.9999522989169183,
+          "std": 3.972882989672686e-05
+        },
+        "pr_auc": {
+          "mean": 0.9999484448414577,
+          "std": 4.4761720124543696e-05
+        }
+      },
+      "per_class": {
+        "BENIGN": {
+          "f1_mean": 0.9991744321748285,
+          "f1_std": 0.00028861323530332333,
+          "precision_mean": 0.9987563742069213,
+          "recall_mean": 0.9995930615171116,
+          "support_per_fold": [
+            10602,
+            11110,
+            10723,
+            10115
+          ]
+        },
+        "DoS GoldenEye": {
+          "f1_mean": 0.994992886448679,
+          "f1_std": 0.0055473087555984,
+          "precision_mean": 0.9991316850481414,
+          "recall_mean": 0.9909578375513165,
+          "support_per_fold": [
+            4470,
+            4697,
+            4676,
+            4677
+          ]
+        },
+        "DoS SYN": {
+          "f1_mean": 0.9620145995907872,
+          "f1_std": 0.01102645490838279,
+          "precision_mean": 0.9303920408148426,
+          "recall_mean": 0.9961755690526196,
+          "support_per_fold": [
+            158,
+            275,
+            223,
+            145
+          ]
+        },
+        "DoS Slowhttptest": {
+          "f1_mean": 0.9693339526447033,
+          "f1_std": 0.00817031861636372,
+          "precision_mean": 0.9656381369333881,
+          "recall_mean": 0.9733128815100842,
+          "support_per_fold": [
+            1547,
+            1700,
+            1462,
+            1566
+          ]
+        },
+        "DoS Slowloris": {
+          "f1_mean": 0.9778073604339428,
+          "f1_std": 0.006329637395345968,
+          "precision_mean": 0.9734101802615802,
+          "recall_mean": 0.982313378014436,
+          "support_per_fold": [
+            1587,
+            1562,
+            1746,
+            1786
+          ]
+        },
+        "FTP-Patator": {
+          "f1_mean": 0.9948979591836735,
+          "f1_std": 0.00883699391616775,
+          "precision_mean": 0.99,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "Infiltration": {
+          "f1_mean": 0.9671657552907722,
+          "f1_std": 0.0056076365702760565,
+          "precision_mean": 0.952893765667519,
+          "recall_mean": 0.982063685052906,
+          "support_per_fold": [
+            1027,
+            1026,
+            1008,
+            1012
+          ]
+        },
+        "PortScan": {
+          "f1_mean": 0.9902937097670257,
+          "f1_std": 0.00081724981116916,
+          "precision_mean": 0.9994005370133645,
+          "recall_mean": 0.9813518765286371,
+          "support_per_fold": [
+            2978,
+            2983,
+            2968,
+            2976
+          ]
+        },
+        "SSH-Patator": {
+          "f1_mean": 0.9767603750319733,
+          "f1_std": 0.025817222385321525,
+          "precision_mean": 0.9637534033008868,
+          "recall_mean": 0.991959358593737,
+          "support_per_fold": [
+            334,
+            334,
+            357,
+            343
+          ]
+        },
+        "Web Attack": {
+          "f1_mean": 0.9983852151415149,
+          "f1_std": 0.0004932540807637246,
+          "precision_mean": 0.9991930602202608,
+          "recall_mean": 0.9975791640762814,
+          "support_per_fold": [
+            1242,
+            1234,
+            1242,
+            1239
+          ]
+        }
+      },
+      "stage1_thresholds": [
+        0.51,
+        0.47000000000000003,
+        0.495,
+        0.48000000000000004
+      ],
+      "confusion_matrix_sum": [
+        [
+          42533,
+          3,
+          0,
+          0,
+          1,
+          0,
+          1,
+          3,
+          9,
+          0
+        ],
+        [
+          22,
+          18351,
+          0,
+          65,
+          2,
+          0,
+          30,
+          0,
+          47,
+          3
+        ],
+        [
+          0,
+          0,
+          798,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          6106,
+          134,
+          0,
+          22,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          102,
+          6565,
+          0,
+          13,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          96,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          25,
+          21,
+          21,
+          1,
+          4000,
+          3,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          31,
+          30,
+          21,
+          0,
+          129,
+          11683,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          3,
+          0,
+          0,
+          1,
+          0,
+          1357,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4945
+        ]
+      ]
+    },
+    "random_forest": {
+      "mean_macro_f1": 0.989191985989229,
+      "std_macro_f1": 0.0032032409857815345,
+      "per_fold_f1": [
+        0.9925161497406784,
+        0.9889690637258454,
+        0.9911863901313114,
+        0.9840963403590811
+      ],
+      "mean_macro_f1_argmax": 0.9897939597707275,
+      "mean_accuracy": 0.9927179430708138,
+      "binary": {
+        "f1": {
+          "mean": 0.9986076458670061,
+          "std": 0.001408559786824063
+        },
+        "precision": {
+          "mean": 0.999779733343661,
+          "std": 0.00015630779815661356
+        },
+        "recall": {
+          "mean": 0.997443057932343,
+          "std": 0.002941262316992973
+        },
+        "fpr": {
+          "mean": 0.0002798450710341141,
+          "std": 0.00019416375362688436
+        },
+        "roc_auc": {
+          "mean": 0.9999805119325377,
+          "std": 2.649423901533668e-05
+        },
+        "pr_auc": {
+          "mean": 0.9999745913066094,
+          "std": 3.811498753808301e-05
+        }
+      },
+      "per_class": {
+        "BENIGN": {
+          "f1_mean": 0.9982191540030766,
+          "f1_std": 0.0017795133721396682,
+          "precision_mean": 0.9967302404018047,
+          "recall_mean": 0.9997201549289659,
+          "support_per_fold": [
+            10602,
+            11110,
+            10723,
+            10115
+          ]
+        },
+        "DoS GoldenEye": {
+          "f1_mean": 0.9945743943269677,
+          "f1_std": 0.004804567734173552,
+          "precision_mean": 0.9993523844841383,
+          "recall_mean": 0.9898892790151679,
+          "support_per_fold": [
+            4470,
+            4697,
+            4676,
+            4677
+          ]
+        },
+        "DoS SYN": {
+          "f1_mean": 1.0,
+          "f1_std": 0.0,
+          "precision_mean": 1.0,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            158,
+            275,
+            223,
+            145
+          ]
+        },
+        "DoS Slowhttptest": {
+          "f1_mean": 0.9779362747835251,
+          "f1_std": 0.002680906780316392,
+          "precision_mean": 0.9764212296040758,
+          "recall_mean": 0.9794859622681689,
+          "support_per_fold": [
+            1547,
+            1700,
+            1462,
+            1566
+          ]
+        },
+        "DoS Slowloris": {
+          "f1_mean": 0.976591481458153,
+          "f1_std": 0.006594511645966521,
+          "precision_mean": 0.9779948709213002,
+          "recall_mean": 0.9751982440329691,
+          "support_per_fold": [
+            1587,
+            1562,
+            1746,
+            1786
+          ]
+        },
+        "FTP-Patator": {
+          "f1_mean": 1.0,
+          "f1_std": 0.0,
+          "precision_mean": 1.0,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "Infiltration": {
+          "f1_mean": 0.9732706169921197,
+          "f1_std": 0.003409014159098655,
+          "precision_mean": 0.9684465793407293,
+          "recall_mean": 0.978167291995211,
+          "support_per_fold": [
+            1027,
+            1026,
+            1008,
+            1012
+          ]
+        },
+        "PortScan": {
+          "f1_mean": 0.9917966611188609,
+          "f1_std": 0.0007276053953496076,
+          "precision_mean": 0.9934327997802503,
+          "recall_mean": 0.9901696995500011,
+          "support_per_fold": [
+            2978,
+            2983,
+            2968,
+            2976
+          ]
+        },
+        "SSH-Patator": {
+          "f1_mean": 0.9796325327786443,
+          "f1_std": 0.02849894831650218,
+          "precision_mean": 0.9663397390942301,
+          "recall_mean": 0.9948479819643854,
+          "support_per_fold": [
+            334,
+            334,
+            357,
+            343
+          ]
+        },
+        "Web Attack": {
+          "f1_mean": 0.9998987444309437,
+          "f1_std": 0.0001753797901548048,
+          "precision_mean": 0.9997975708502025,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            1242,
+            1234,
+            1242,
+            1239
+          ]
+        }
+      },
+      "stage1_thresholds": [
+        0.625,
+        0.34,
+        0.78,
+        0.5750000000000001
+      ],
+      "confusion_matrix_sum": [
+        [
+          42538,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          5,
+          3,
+          1
+        ],
+        [
+          115,
+          18331,
+          0,
+          6,
+          5,
+          0,
+          13,
+          1,
+          49,
+          0
+        ],
+        [
+          0,
+          0,
+          801,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          11,
+          6,
+          0,
+          6145,
+          102,
+          0,
+          3,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          122,
+          6517,
+          0,
+          29,
+          9,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          96,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          6,
+          26,
+          0,
+          3984,
+          55,
+          0,
+          0
+        ],
+        [
+          8,
+          1,
+          0,
+          14,
+          13,
+          0,
+          81,
+          11788,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1361,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4957
+        ]
+      ]
+    },
+    "xgboost": {
+      "mean_macro_f1": 0.9901133045821146,
+      "std_macro_f1": 0.0008709749130750302,
+      "per_fold_f1": [
+        0.9915602958524469,
+        0.989289909364134,
+        0.9896168585703571,
+        0.9899861545415204
+      ],
+      "mean_macro_f1_argmax": 0.9903234507676364,
+      "mean_accuracy": 0.9934410208195312,
+      "binary": {
+        "f1": {
+          "mean": 0.9994619799669868,
+          "std": 0.00022190588708882766
+        },
+        "precision": {
+          "mean": 0.9996336512394995,
+          "std": 0.0004177559081389842
+        },
+        "recall": {
+          "mean": 0.9992905295263501,
+          "std": 0.00029300813727449655
+        },
+        "fpr": {
+          "mean": 0.00048750350035150385,
+          "std": 0.0005668608893341723
+        },
+        "roc_auc": {
+          "mean": 0.9999863427407681,
+          "std": 2.3332458061891636e-05
+        },
+        "pr_auc": {
+          "mean": 0.9999902599288045,
+          "std": 1.661457265221832e-05
+        }
+      },
+      "per_class": {
+        "BENIGN": {
+          "f1_mean": 0.9992993001277112,
+          "f1_std": 0.0003174921520241435,
+          "precision_mean": 0.9990864542027442,
+          "recall_mean": 0.9995124964996485,
+          "support_per_fold": [
+            10602,
+            11110,
+            10723,
+            10115
+          ]
+        },
+        "DoS GoldenEye": {
+          "f1_mean": 0.998061834737551,
+          "f1_std": 0.001228638070682977,
+          "precision_mean": 0.9985983994023828,
+          "recall_mean": 0.9975278543125041,
+          "support_per_fold": [
+            4470,
+            4697,
+            4676,
+            4677
+          ]
+        },
+        "DoS SYN": {
+          "f1_mean": 0.9985790957179814,
+          "f1_std": 0.0014818076783808646,
+          "precision_mean": 0.9982876712328768,
+          "recall_mean": 0.9988789237668161,
+          "support_per_fold": [
+            158,
+            275,
+            223,
+            145
+          ]
+        },
+        "DoS Slowhttptest": {
+          "f1_mean": 0.9722436207681129,
+          "f1_std": 0.003571585403480934,
+          "precision_mean": 0.9702453994454445,
+          "recall_mean": 0.9743069853799133,
+          "support_per_fold": [
+            1547,
+            1700,
+            1462,
+            1566
+          ]
+        },
+        "DoS Slowloris": {
+          "f1_mean": 0.9704325942202718,
+          "f1_std": 0.004259247856515495,
+          "precision_mean": 0.9732432641997903,
+          "recall_mean": 0.9676874132003981,
+          "support_per_fold": [
+            1587,
+            1562,
+            1746,
+            1786
+          ]
+        },
+        "FTP-Patator": {
+          "f1_mean": 1.0,
+          "f1_std": 0.0,
+          "precision_mean": 1.0,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "Infiltration": {
+          "f1_mean": 0.9757862834163158,
+          "f1_std": 0.002858758916131861,
+          "precision_mean": 0.9727000712927414,
+          "recall_mean": 0.9789243172549229,
+          "support_per_fold": [
+            1027,
+            1026,
+            1008,
+            1012
+          ]
+        },
+        "PortScan": {
+          "f1_mean": 0.9921445952877364,
+          "f1_std": 0.0007794129241240301,
+          "precision_mean": 0.9922711544401766,
+          "recall_mean": 0.992018810785881,
+          "support_per_fold": [
+            2978,
+            2983,
+            2968,
+            2976
+          ]
+        },
+        "SSH-Patator": {
+          "f1_mean": 0.9948899811803539,
+          "f1_std": 0.0012346414291834452,
+          "precision_mean": 0.9956300603815014,
+          "recall_mean": 0.9942048675757729,
+          "support_per_fold": [
+            334,
+            334,
+            357,
+            343
+          ]
+        },
+        "Web Attack": {
+          "f1_mean": 0.9996957403651116,
+          "f1_std": 0.0005269931463191491,
+          "precision_mean": 1.0,
+          "recall_mean": 0.9993922204213939,
+          "support_per_fold": [
+            1242,
+            1234,
+            1242,
+            1239
+          ]
+        }
+      },
+      "stage1_thresholds": [
+        0.185,
+        0.985,
+        0.9600000000000001,
+        0.005
+      ],
+      "confusion_matrix_sum": [
+        [
+          42530,
+          6,
+          1,
+          1,
+          0,
+          0,
+          3,
+          4,
+          5,
+          0
+        ],
+        [
+          19,
+          18474,
+          0,
+          11,
+          11,
+          0,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          800,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          16,
+          0,
+          6113,
+          133,
+          0,
+          9,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          4,
+          0,
+          172,
+          6464,
+          0,
+          23,
+          17,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          96,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          18,
+          0,
+          3987,
+          66,
+          1,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          2,
+          14,
+          0,
+          71,
+          11810,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1360,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4954
+        ]
+      ]
+    },
+    "bilstm": {
+      "mean_macro_f1": 0.9830423340754475,
+      "std_macro_f1": 0.004070382747358469,
+      "per_fold_f1": [
+        0.9847455636701943,
+        0.9835579799256081,
+        0.9874394141739382,
+        0.9764263785320493
+      ],
+      "mean_macro_f1_argmax": 0.9825014510206884,
+      "mean_accuracy": 0.9920785696199692,
+      "binary": {
+        "f1": {
+          "mean": 0.998996848462436,
+          "std": 0.0007429963674805152
+        },
+        "precision": {
+          "mean": 0.999417506262207,
+          "std": 0.00063539527395858
+        },
+        "recall": {
+          "mean": 0.9985765782401868,
+          "std": 0.0008564426496046819
+        },
+        "fpr": {
+          "mean": 0.0007747635853062537,
+          "std": 0.0008721062716812937
+        },
+        "roc_auc": {
+          "mean": 0.9999743196739029,
+          "std": 2.8464610705398643e-05
+        },
+        "pr_auc": {
+          "mean": 0.9999808222586863,
+          "std": 2.0723093967201294e-05
+        }
+      },
+      "per_class": {
+        "BENIGN": {
+          "f1_mean": 0.9986793682225956,
+          "f1_std": 0.0010343112293091262,
+          "precision_mean": 0.9981341666184369,
+          "recall_mean": 0.9992252364146939,
+          "support_per_fold": [
+            10602,
+            11110,
+            10723,
+            10115
+          ]
+        },
+        "DoS GoldenEye": {
+          "f1_mean": 0.9965613203449273,
+          "f1_std": 0.004888594827699069,
+          "precision_mean": 0.9992856754462857,
+          "recall_mean": 0.9938971202348625,
+          "support_per_fold": [
+            4470,
+            4697,
+            4676,
+            4677
+          ]
+        },
+        "DoS SYN": {
+          "f1_mean": 0.9639261100782638,
+          "f1_std": 0.012109280314899128,
+          "precision_mean": 0.9342212687168157,
+          "recall_mean": 0.9957844926788619,
+          "support_per_fold": [
+            158,
+            275,
+            223,
+            145
+          ]
+        },
+        "DoS Slowhttptest": {
+          "f1_mean": 0.9732058748760872,
+          "f1_std": 0.00603716642711698,
+          "precision_mean": 0.9679914446876592,
+          "recall_mean": 0.9785567850331519,
+          "support_per_fold": [
+            1547,
+            1700,
+            1462,
+            1566
+          ]
+        },
+        "DoS Slowloris": {
+          "f1_mean": 0.9765117255701731,
+          "f1_std": 0.006627336918421789,
+          "precision_mean": 0.97583628616596,
+          "recall_mean": 0.9772252729867745,
+          "support_per_fold": [
+            1587,
+            1562,
+            1746,
+            1786
+          ]
+        },
+        "FTP-Patator": {
+          "f1_mean": 0.9846938775510203,
+          "f1_std": 0.00883699391616775,
+          "precision_mean": 0.97,
+          "recall_mean": 1.0,
+          "support_per_fold": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "Infiltration": {
+          "f1_mean": 0.9703159467219801,
+          "f1_std": 0.004044664546351345,
+          "precision_mean": 0.9629001537868914,
+          "recall_mean": 0.9778934822732617,
+          "support_per_fold": [
+            1027,
+            1026,
+            1008,
+            1012
+          ]
+        },
+        "PortScan": {
+          "f1_mean": 0.9886886605292322,
+          "f1_std": 0.002858307144613763,
+          "precision_mean": 0.9946207500405587,
+          "recall_mean": 0.9828648246881101,
+          "support_per_fold": [
+            2978,
+            2983,
+            2968,
+            2976
+          ]
+        },
+        "SSH-Patator": {
+          "f1_mean": 0.9796594648320974,
+          "f1_std": 0.018508019864495576,
+          "precision_mean": 0.9746358634083185,
+          "recall_mean": 0.9854174775128186,
+          "support_per_fold": [
+            334,
+            334,
+            357,
+            343
+          ]
+        },
+        "Web Attack": {
+          "f1_mean": 0.9981809920280973,
+          "f1_std": 0.0006710666322836417,
+          "precision_mean": 1.0,
+          "recall_mean": 0.9963694850847308,
+          "support_per_fold": [
+            1242,
+            1234,
+            1242,
+            1239
+          ]
+        }
+      },
+      "stage1_thresholds": [
+        0.98,
+        0.895,
+        0.905,
+        0.895
+      ],
+      "confusion_matrix_sum": [
+        [
+          42518,
+          3,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          27,
+          0
+        ],
+        [
+          23,
+          18406,
+          0,
+          12,
+          5,
+          0,
+          22,
+          43,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          798,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          7,
+          0,
+          6139,
+          112,
+          0,
+          15,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          139,
+          6530,
+          1,
+          8,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          96,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          20,
+          22,
+          22,
+          2,
+          3983,
+          20,
+          1,
+          0
+        ],
+        [
+          15,
+          0,
+          32,
+          30,
+          24,
+          0,
+          103,
+          11701,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1348,
+          0
+        ],
+        [
+          17,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4939
+        ]
+      ]
+    },
+    "vanilla_transformer": {
+      "mean_macro_f1": 0.9840212579928804,
+      "std_macro_f1": 0.003071715297901998,
+      "per_fold_f1": [
+        0.9864965752602017,
+        0.9862416252195778,
+        0.9844716104189134,
+        0.9788752210728286
+      ],
+      "mean_macro_f1_argmax": 0.9825237459072259,
+      "mean_accuracy": 0.9916525483311166,
+      "binary": {
+        "f1": {
+          "mean": 0.9979821299474699,
+          "std": 0.0023682345083134992
+        },
+        "precision": {
+          "mean": 0.9999082846465084,
+          "std": 3.141247252046575e-05
+        },
+        "recall": {
+          "mean": 0.9960745984245585,
+          "std": 0.004715400555552756
+        },
+        "fpr": {
+          "mean": 0.00011742721735960804,
+          "std": 4.0010505994753365e-05
+        },
+        "roc_auc": {
+          "mean": 0.999977392938776,
+          "std": 1.6321677186299307e-05
+        },
+        "pr_auc": {
+          "mean": 0.9999840687503612,
+          "std": 9.747594023871684e-06
+        }
+      },
+      "per_class": {
+        "BENIGN": {
+          "f1_mean": 0.9973330402208317,
+          "f1_std": 0.003200004032414411,
+          "precision_mean": 0.9948168550129828,
+          "recall_mean": 0.9998825727826404,
+          "support_per_fold": [
+            10602,
+            11110,
+            10723,
+            10115
+          ]
+        },
+        "DoS GoldenEye": {
+          "f1_mean": 0.9949391434351658,
+          "f1_std": 0.005248131837547139,
+          "precision_mean": 0.9994521460514665,
+          "recall_mean": 0.9905277888381364,
+          "support_per_fold": [
+            4470,
+            4697,
+            4676,
+            4677
+          ]
+        },
+        "DoS SYN": {
+          "f1_mean": 0.9610775960659816,
+          "f1_std": 0.017233693502753826,
+          "precision_mean": 0.9300194379404316,
+          "recall_mean": 0.9950544928194358,
+          "support_per_fold": [
+            158,
+            275,
+            223,
+            145
+          ]
+        },
+        "DoS Slowhttptest": {
+          "f1_mean": 0.9736278965414285,
+          "f1_std": 0.0052893285876299476,
+          "precision_mean": 0.9697702898098861,
+          "recall_mean": 0.9776204864909521,
+          "support_per_fold": [
+            1547,
+            1700,
+            1462,
+            1566
+          ]
+        },
+        "DoS Slowloris": {
+          "f1_mean": 0.9782279950084367,
+          "f1_std": 0.00544135151515799,
+          "precision_mean": 0.9790138145953777,
+          "recall_mean": 0.9774693181642599,
+          "support_per_fold": [
+            1587,
+            1562,
+            1746,
+            1786
+          ]
+        },
+        "FTP-Patator": {
+          "f1_mean": 0.9844767694311767,
+          "f1_std": 0.008969351050075406,
+          "precision_mean": 0.98,
+          "recall_mean": 0.9895833333333334,
+          "support_per_fold": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "Infiltration": {
+          "f1_mean": 0.9692631358485747,
+          "f1_std": 0.0034080382351758414,
+          "precision_mean": 0.961004587962409,
+          "recall_mean": 0.9778768652531253,
+          "support_per_fold": [
+            1027,
+            1026,
+            1008,
+            1012
+          ]
+        },
+        "PortScan": {
+          "f1_mean": 0.9903015265363877,
+          "f1_std": 0.00023424710237725946,
+          "precision_mean": 0.9987221136438327,
+          "recall_mean": 0.9820249037651587,
+          "support_per_fold": [
+            2978,
+            2983,
+            2968,
+            2976
+          ]
+        },
+        "SSH-Patator": {
+          "f1_mean": 0.9937791222704699,
+          "f1_std": 0.0018080581360734936,
+          "precision_mean": 0.9984939622401858,
+          "recall_mean": 0.9891207124423764,
+          "support_per_fold": [
+            334,
+            334,
+            357,
+            343
+          ]
+        },
+        "Web Attack": {
+          "f1_mean": 0.9971863545703514,
+          "f1_std": 0.002544469384216588,
+          "precision_mean": 0.9970095693779905,
+          "recall_mean": 0.9973773884507771,
+          "support_per_fold": [
+            1242,
+            1234,
+            1242,
+            1239
+          ]
+        }
+      },
+      "stage1_thresholds": [
+        0.665,
+        0.925,
+        0.995,
+        0.99
+      ],
+      "confusion_matrix_sum": [
+        [
+          42545,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          117,
+          18343,
+          3,
+          27,
+          7,
+          0,
+          8,
+          0,
+          0,
+          15
+        ],
+        [
+          0,
+          0,
+          797,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          34,
+          7,
+          0,
+          6133,
+          87,
+          0,
+          14,
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          0,
+          127,
+          6532,
+          0,
+          11,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          95,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          1,
+          25,
+          14,
+          25,
+          2,
+          3983,
+          13,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          27,
+          21,
+          21,
+          0,
+          123,
+          11691,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          1353,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          4944
+        ]
+      ]
+    }
+  },
+  "statistical_tests": {
+    "random_forest": {
+      "delta_mean": -0.0061093614184389855,
+      "delta_ci": [
+        -0.009903247683183968,
+        -0.002315475153694002
+      ],
+      "cohens_d": -1.2601875360532009,
+      "p_value": 0.014384973067244245,
+      "significant": true
+    },
+    "xgboost": {
+      "delta_mean": -0.007030680011324508,
+      "delta_ci": [
+        -0.015879139148793513,
+        0.0018177791261444944
+      ],
+      "cohens_d": -1.696820728460477,
+      "p_value": 0.08552436128839262,
+      "significant": false
+    },
+    "bilstm": {
+      "delta_mean": 4.0290495342598653e-05,
+      "delta_ci": [
+        -0.003922922815009915,
+        0.0040035038056951125
+      ],
+      "cohens_d": 0.007654240690969926,
+      "p_value": 0.9762225796352803,
+      "significant": false
+    },
+    "vanilla_transformer": {
+      "delta_mean": -0.0009386334220903292,
+      "delta_ci": [
+        -0.004847522103960863,
+        0.002970255259780205
+      ],
+      "cohens_d": -0.19592025058386303,
+      "p_value": 0.5003594172709495,
+      "significant": false
+    }
+  },
+  "per_fold_results": {
+    "HiT-IDS (Cascade)": [
+      {
+        "macro_f1": 0.9876332640250658,
+        "macro_f1_present_only": 0.9876332640250658,
+        "weighted_f1": 0.9941739824163657,
+        "accuracy": 0.9941591221995077,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.999057137469357,
+            "recall": 0.9994340690435767,
+            "f1": 0.999245567710298,
+            "support": 10602
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9988816819503467,
+            "recall": 0.9991051454138703,
+            "f1": 0.9989934011855497,
+            "support": 4470
+          },
+          "DoS SYN": {
+            "precision": 0.9345238095238095,
+            "recall": 0.9936708860759493,
+            "f1": 0.9631901840490797,
+            "support": 158
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9725063938618926,
+            "recall": 0.9831932773109243,
+            "f1": 0.9778206364513018,
+            "support": 1547
+          },
+          "DoS Slowloris": {
+            "precision": 0.9787367104440275,
+            "recall": 0.9861373660995589,
+            "f1": 0.9824231010671689,
+            "support": 1587
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9700772200772201,
+            "recall": 0.9785783836416748,
+            "f1": 0.9743092583616093,
+            "support": 1027
+          },
+          "PortScan": {
+            "precision": 0.9993164730006835,
+            "recall": 0.9818670248488919,
+            "f1": 0.9905149051490515,
+            "support": 2978
+          },
+          "SSH-Patator": {
+            "precision": 0.9880952380952381,
+            "recall": 0.9940119760479041,
+            "f1": 0.991044776119403,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975845410628019,
+            "f1": 0.9987908101571947,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10596,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            4,
+            0
+          ],
+          [
+            0,
+            4466,
+            0,
+            3,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            157,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1521,
+            20,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            22,
+            1565,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            6,
+            6,
+            8,
+            0,
+            1005,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            5,
+            11,
+            5,
+            0,
+            28,
+            2924,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            332,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9994014216236439,
+          "precision": 0.9995509990271646,
+          "recall": 0.9992518889803247,
+          "fpr": 0.0005659309564233164,
+          "roc_auc": 0.9999863671902469,
+          "pr_auc": 0.999988981894378
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999863671902469,
+          "DoS GoldenEye": 0.9998535231486086,
+          "DoS SYN": 0.9999678374371168,
+          "DoS Slowhttptest": 0.9998305697199116,
+          "DoS Slowloris": 0.9997457787017957,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9990596497649507,
+          "PortScan": 0.9999436580946665,
+          "SSH-Patator": 0.9997985834972747,
+          "Web Attack": 0.9999884153199211
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999836224034845,
+          "DoS GoldenEye": 0.999628004532596,
+          "DoS SYN": 0.9943238844566723,
+          "DoS Slowhttptest": 0.9933601331705535,
+          "DoS Slowloris": 0.9979769638568083,
+          "FTP-Patator": 0.9999999999999999,
+          "Infiltration": 0.9953482270284285,
+          "PortScan": 0.9996157008185429,
+          "SSH-Patator": 0.9964799813187608,
+          "Web Attack": 0.9998123875852427
+        },
+        "macro_roc_auc_ovr": 0.9998174382874494,
+        "macro_pr_auc": 0.9976528905171088,
+        "stage1_threshold": 0.51,
+        "test_macro_f1_at_0.5": 0.987438355315919
+      },
+      {
+        "macro_f1": 0.9849131367101169,
+        "macro_f1_present_only": 0.9849131367101169,
+        "weighted_f1": 0.9920484135868016,
+        "accuracy": 0.992022449388655,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.999190501888829,
+            "recall": 0.9999099909990999,
+            "f1": 0.999550116969588,
+            "support": 11110
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9985096870342772,
+            "recall": 0.9985096870342772,
+            "f1": 0.9985096870342772,
+            "support": 4697
+          },
+          "DoS SYN": {
+            "precision": 0.9515570934256056,
+            "recall": 1.0,
+            "f1": 0.975177304964539,
+            "support": 275
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.970291146761735,
+            "recall": 0.9605882352941176,
+            "f1": 0.9654153118533846,
+            "support": 1700
+          },
+          "DoS Slowloris": {
+            "precision": 0.9673286354900704,
+            "recall": 0.9667093469910372,
+            "f1": 0.9670188920909382,
+            "support": 1562
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9380203515263644,
+            "recall": 0.9883040935672515,
+            "f1": 0.9625059326056004,
+            "support": 1026
+          },
+          "PortScan": {
+            "precision": 1.0,
+            "recall": 0.9825678846798525,
+            "f1": 0.9912073047007102,
+            "support": 2983
+          },
+          "SSH-Patator": {
+            "precision": 0.996969696969697,
+            "recall": 0.9850299401197605,
+            "f1": 0.9909638554216867,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975688816855753,
+            "f1": 0.9987829614604462,
+            "support": 1234
+          }
+        },
+        "confusion_matrix": [
+          [
+            11109,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            4690,
+            0,
+            5,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            275,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            7,
+            0,
+            1633,
+            43,
+            0,
+            17,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            39,
+            1510,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            2,
+            4,
+            0,
+            1014,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            8,
+            3,
+            2,
+            0,
+            36,
+            2931,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            329,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1231
+          ]
+        ],
+        "binary": {
+          "f1": 0.9996384932398236,
+          "precision": 0.9999276777319737,
+          "recall": 0.9993494759667509,
+          "fpr": 9.000900090009e-05,
+          "roc_auc": 0.9999951400994816,
+          "pr_auc": 0.99999616472559
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999951400994815,
+          "DoS GoldenEye": 0.9999202669525098,
+          "DoS SYN": 0.9999749419611601,
+          "DoS Slowhttptest": 0.9998298811888705,
+          "DoS Slowloris": 0.9998556027686374,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999154880013744,
+          "PortScan": 0.9998821525236518,
+          "SSH-Patator": 0.9998610718103025,
+          "Web Attack": 0.9999898494068944
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999938821825044,
+          "DoS GoldenEye": 0.9997771619092753,
+          "DoS SYN": 0.9974721534082918,
+          "DoS Slowhttptest": 0.9977166983731711,
+          "DoS Slowloris": 0.9979111776113154,
+          "FTP-Patator": 0.9999999999999999,
+          "Infiltration": 0.9980899356121109,
+          "PortScan": 0.9993278488060884,
+          "SSH-Patator": 0.9956013989351303,
+          "Web Attack": 0.9998249572649657
+        },
+        "macro_roc_auc_ovr": 0.9999224394712882,
+        "macro_pr_auc": 0.9985715214102854,
+        "stage1_threshold": 0.47000000000000003,
+        "test_macro_f1_at_0.5": 0.9850671040067518
+      },
+      {
+        "macro_f1": 0.9851625178909729,
+        "macro_f1_present_only": 0.9851625178909729,
+        "weighted_f1": 0.9933012889589117,
+        "accuracy": 0.9932866674853658,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9977661950856291,
+            "recall": 0.9997202275482607,
+            "f1": 0.9987422555550379,
+            "support": 10723
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9993553932101418,
+            "recall": 0.9946535500427716,
+            "f1": 0.9969989281886388,
+            "support": 4676
+          },
+          "DoS SYN": {
+            "precision": 0.9404255319148936,
+            "recall": 0.9910313901345291,
+            "f1": 0.9650655021834061,
+            "support": 223
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9826749826749827,
+            "recall": 0.9699042407660738,
+            "f1": 0.9762478485370052,
+            "support": 1462
+          },
+          "DoS Slowloris": {
+            "precision": 0.9682804674457429,
+            "recall": 0.9965635738831615,
+            "f1": 0.9822184589331076,
+            "support": 1746
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9647404505386875,
+            "recall": 0.9771825396825397,
+            "f1": 0.9709216362740266,
+            "support": 1008
+          },
+          "PortScan": {
+            "precision": 0.9993141289437586,
+            "recall": 0.9818059299191375,
+            "f1": 0.990482664853841,
+            "support": 2968
+          },
+          "SSH-Patator": {
+            "precision": 0.9971751412429378,
+            "recall": 0.988795518207283,
+            "f1": 0.9929676511954993,
+            "support": 357
+          },
+          "Web Attack": {
+            "precision": 0.9991935483870967,
+            "recall": 0.9975845410628019,
+            "f1": 0.9983883964544722,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10720,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            15,
+            4651,
+            0,
+            5,
+            0,
+            0,
+            4,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            221,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1418,
+            43,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            1740,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            8,
+            6,
+            5,
+            1,
+            985,
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            6,
+            7,
+            9,
+            0,
+            29,
+            2914,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            353,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9990142747617831,
+          "precision": 0.9997807818779686,
+          "recall": 0.9982489420691668,
+          "fpr": 0.0002797724517392521,
+          "roc_auc": 0.9999004282781566,
+          "pr_auc": 0.9998943323135359
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999004282781567,
+          "DoS GoldenEye": 0.9999961132475378,
+          "DoS SYN": 0.9999827711989282,
+          "DoS Slowhttptest": 0.999751919083093,
+          "DoS Slowloris": 0.9999413829502987,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9998242784084016,
+          "PortScan": 0.9999161175082086,
+          "SSH-Patator": 0.9999876653885217,
+          "Web Attack": 0.9999802071333908
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999187848287212,
+          "DoS GoldenEye": 0.9999833802482789,
+          "DoS SYN": 0.9981445221838192,
+          "DoS Slowhttptest": 0.9983727953414686,
+          "DoS Slowloris": 0.9992476049529626,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9969402582358817,
+          "PortScan": 0.9995044873834131,
+          "SSH-Patator": 0.9993250835349985,
+          "Web Attack": 0.999693976748208
+        },
+        "macro_roc_auc_ovr": 0.9999280883196537,
+        "macro_pr_auc": 0.9991130893457753,
+        "stage1_threshold": 0.495,
+        "test_macro_f1_at_0.5": 0.9851625178909729
+      },
+      {
+        "macro_f1": 0.9746215796570047,
+        "macro_f1_present_only": 0.9746215796570047,
+        "weighted_f1": 0.9880395969550005,
+        "accuracy": 0.987899342628648,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9990116623838703,
+            "recall": 0.9993079584775086,
+            "f1": 0.9991597884643899,
+            "support": 10115
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9997799779977998,
+            "recall": 0.9715629677143468,
+            "f1": 0.9854695293862503,
+            "support": 4677
+          },
+          "DoS SYN": {
+            "precision": 0.8950617283950617,
+            "recall": 1.0,
+            "f1": 0.9446254071661238,
+            "support": 145
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.937080024434942,
+            "recall": 0.979565772669221,
+            "f1": 0.9578520137371215,
+            "support": 1566
+          },
+          "DoS Slowloris": {
+            "precision": 0.9792949076664801,
+            "recall": 0.9798432250839866,
+            "f1": 0.9795689896445564,
+            "support": 1786
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9387370405278039,
+            "recall": 0.9841897233201581,
+            "f1": 0.9609261939218524,
+            "support": 1012
+          },
+          "PortScan": {
+            "precision": 0.9989715461090161,
+            "recall": 0.9791666666666666,
+            "f1": 0.9889699643645002,
+            "support": 2976
+          },
+          "SSH-Patator": {
+            "precision": 0.8727735368956743,
+            "recall": 1.0,
+            "f1": 0.9320652173913043,
+            "support": 343
+          },
+          "Web Attack": {
+            "precision": 0.9975786924939467,
+            "recall": 0.9975786924939467,
+            "f1": 0.9975786924939467,
+            "support": 1239
+          }
+        },
+        "confusion_matrix": [
+          [
+            10108,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            7,
+            4544,
+            0,
+            52,
+            0,
+            0,
+            25,
+            0,
+            47,
+            2
+          ],
+          [
+            0,
+            0,
+            145,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1534,
+            28,
+            0,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            35,
+            1750,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            7,
+            4,
+            0,
+            996,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            12,
+            9,
+            5,
+            0,
+            36,
+            2914,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            343,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1236
+          ]
+        ],
+        "binary": {
+          "f1": 0.9993825591108851,
+          "precision": 0.9994914638576099,
+          "recall": 0.9992736780941314,
+          "fpr": 0.0006920415224913495,
+          "roc_auc": 0.9999272600997879,
+          "pr_auc": 0.9999143004323272
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999272600997879,
+          "DoS GoldenEye": 0.9941947618954423,
+          "DoS SYN": 0.9999311448833677,
+          "DoS Slowhttptest": 0.9996436319785769,
+          "DoS Slowloris": 0.9997987216193935,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9998446779090769,
+          "PortScan": 0.9997445966546163,
+          "SSH-Patator": 0.9996883909529342,
+          "Web Attack": 0.9999911605096052
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999442293689556,
+          "DoS GoldenEye": 0.9915970445403767,
+          "DoS SYN": 0.983988267248622,
+          "DoS Slowhttptest": 0.9954626429605797,
+          "DoS Slowloris": 0.9977424923815743,
+          "FTP-Patator": 0.9999999999999999,
+          "Infiltration": 0.9965598034212023,
+          "PortScan": 0.9988139473637208,
+          "SSH-Patator": 0.9791919163002971,
+          "Web Attack": 0.9998552048864712
+        },
+        "macro_roc_auc_ovr": 0.99927643465028,
+        "macro_pr_auc": 0.9943155548471798,
+        "stage1_threshold": 0.48000000000000004,
+        "test_macro_f1_at_0.5": 0.9745958689064187
+      }
+    ],
+    "random_forest": [
+      {
+        "macro_f1": 0.9925161497406784,
+        "macro_f1_present_only": 0.9925161497406784,
+        "weighted_f1": 0.9949102226038271,
+        "accuracy": 0.9949100922024281,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9988688849090395,
+            "recall": 0.9995283908696473,
+            "f1": 0.9991985290651078,
+            "support": 10602
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9997761862130707,
+            "recall": 0.9993288590604027,
+            "f1": 0.9995524725889461,
+            "support": 4470
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 158
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9762668377164849,
+            "recall": 0.9838396897220426,
+            "f1": 0.9800386349001932,
+            "support": 1547
+          },
+          "DoS Slowloris": {
+            "precision": 0.9848005066497784,
+            "recall": 0.9798361688720857,
+            "f1": 0.9823120656980417,
+            "support": 1587
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9766081871345029,
+            "recall": 0.9756572541382668,
+            "f1": 0.9761324890404286,
+            "support": 1027
+          },
+          "PortScan": {
+            "precision": 0.9922558922558923,
+            "recall": 0.9895903290799194,
+            "f1": 0.9909213180901143,
+            "support": 2978
+          },
+          "SSH-Patator": {
+            "precision": 0.9970059880239521,
+            "recall": 0.9970059880239521,
+            "f1": 0.9970059880239521,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10597,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            4467,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            158,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            1,
+            0,
+            1522,
+            12,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            1555,
+            0,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            1002,
+            16,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            4,
+            3,
+            0,
+            22,
+            2947,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            333,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1242
+          ]
+        ],
+        "binary": {
+          "f1": 0.9993639390878138,
+          "precision": 0.999625748502994,
+          "recall": 0.9991022667763896,
+          "fpr": 0.00047160913035276363,
+          "roc_auc": 0.9999902905040269,
+          "pr_auc": 0.9999921802041849
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999902905040269,
+          "DoS GoldenEye": 0.9998665221517126,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9994492002354555,
+          "DoS Slowloris": 0.9998158232853983,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9989308587923809,
+          "PortScan": 0.9994695750351801,
+          "SSH-Patator": 0.9999991132606798,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999882417520631,
+          "DoS GoldenEye": 0.9997565624075266,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9957123617484953,
+          "DoS Slowloris": 0.9970132607472323,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9963615476213209,
+          "PortScan": 0.9989685875715579,
+          "SSH-Patator": 0.9999385393436002,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9997521383264834,
+        "macro_pr_auc": 0.9987739101191796,
+        "stage1_threshold": 0.625,
+        "test_macro_f1_at_argmax": 0.992874637066332
+      },
+      {
+        "macro_f1": 0.9889690637258454,
+        "macro_f1_present_only": 0.9889690637258454,
+        "weighted_f1": 0.993304299793482,
+        "accuracy": 0.9933052715975146,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.999729924378826,
+            "recall": 0.9995499549954996,
+            "f1": 0.9996399315870015,
+            "support": 11110
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9987236758136566,
+            "recall": 0.9995741962955078,
+            "f1": 0.9991487550542668,
+            "support": 4697
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 275
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9769094138543517,
+            "recall": 0.9705882352941176,
+            "f1": 0.9737385659486574,
+            "support": 1700
+          },
+          "DoS Slowloris": {
+            "precision": 0.9690522243713733,
+            "recall": 0.9622279129321383,
+            "f1": 0.9656280115644074,
+            "support": 1562
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9588516746411483,
+            "recall": 0.9766081871345029,
+            "f1": 0.9676484789956543,
+            "support": 1026
+          },
+          "PortScan": {
+            "precision": 0.9916219839142091,
+            "recall": 0.9919544083137781,
+            "f1": 0.9917881682587565,
+            "support": 2983
+          },
+          "SSH-Patator": {
+            "precision": 0.993993993993994,
+            "recall": 0.9910179640718563,
+            "f1": 0.992503748125937,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 0.9991902834008097,
+            "recall": 1.0,
+            "f1": 0.9995949777237748,
+            "support": 1234
+          }
+        },
+        "confusion_matrix": [
+          [
+            11105,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            4695,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            275,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            1650,
+            41,
+            0,
+            3,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            36,
+            1503,
+            0,
+            19,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            5,
+            0,
+            1002,
+            18,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1,
+            2,
+            0,
+            19,
+            2959,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            331,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1234
+          ]
+        ],
+        "binary": {
+          "f1": 0.9997108991037872,
+          "precision": 0.9996386499963865,
+          "recall": 0.9997831586555836,
+          "fpr": 0.00045004500450045,
+          "roc_auc": 0.9999995901288719,
+          "pr_auc": 0.9999996657443188
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.999999590128872,
+          "DoS GoldenEye": 0.9998870562403249,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9975812382169472,
+          "DoS Slowloris": 0.9981647122845467,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.998900753167346,
+          "PortScan": 0.9992903507515174,
+          "SSH-Patator": 0.9999597327226009,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999994817733343,
+          "DoS GoldenEye": 0.9998068814086736,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9922977714222427,
+          "DoS Slowloris": 0.9876339539239082,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9957144113239764,
+          "PortScan": 0.9986021989444489,
+          "SSH-Patator": 0.9984234590871913,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9993783433512154,
+        "macro_pr_auc": 0.9972478157883776,
+        "stage1_threshold": 0.34,
+        "test_macro_f1_at_argmax": 0.9889895488425331
+      },
+      {
+        "macro_f1": 0.9911863901313114,
+        "macro_f1_present_only": 0.9911863901313114,
+        "weighted_f1": 0.9912319151179168,
+        "accuracy": 0.9912399197674895,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.990394384409347,
+            "recall": 1.0,
+            "f1": 0.9951740139211137,
+            "support": 10723
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9993451211525868,
+            "recall": 0.9790419161676647,
+            "f1": 0.9890893377984228,
+            "support": 4676
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 223
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9814941740918437,
+            "recall": 0.9794801641586868,
+            "f1": 0.9804861348853132,
+            "support": 1462
+          },
+          "DoS Slowloris": {
+            "precision": 0.98,
+            "recall": 0.9822451317296678,
+            "f1": 0.9811212814645309,
+            "support": 1746
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9696376101860921,
+            "recall": 0.9821428571428571,
+            "f1": 0.9758501724987678,
+            "support": 1008
+          },
+          "PortScan": {
+            "precision": 0.9952477936184657,
+            "recall": 0.9878706199460916,
+            "f1": 0.9915454852891444,
+            "support": 2968
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9971988795518207,
+            "f1": 0.9985974754558204,
+            "support": 357
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10723,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            98,
+            4578,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            223,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            1432,
+            25,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            21,
+            1715,
+            0,
+            7,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            5,
+            0,
+            990,
+            10,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            3,
+            5,
+            0,
+            24,
+            2932,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            356,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1242
+          ]
+        ],
+        "binary": {
+          "f1": 0.9961915922074117,
+          "precision": 1.0,
+          "recall": 0.9924120822997228,
+          "fpr": 0.0,
+          "roc_auc": 0.9999971626754128,
+          "pr_auc": 0.9999977727396617
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999971626754128,
+          "DoS GoldenEye": 0.9999966978843984,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9988078863166369,
+          "DoS Slowloris": 0.9995692789393372,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9994002550282172,
+          "PortScan": 0.9994629353992719,
+          "SSH-Patator": 0.9999994181787039,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999964071210958,
+          "DoS GoldenEye": 0.9999859232068711,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9957273579047666,
+          "DoS Slowloris": 0.9976785453199927,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9970198160604088,
+          "PortScan": 0.9989341604348788,
+          "SSH-Patator": 0.9999607898003884,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9997233634421978,
+        "macro_pr_auc": 0.9989302999848402,
+        "stage1_threshold": 0.78,
+        "test_macro_f1_at_argmax": 0.9925774288670584
+      },
+      {
+        "macro_f1": 0.9840963403590811,
+        "macro_f1_present_only": 0.9840963403590811,
+        "weighted_f1": 0.991481260587373,
+        "accuracy": 0.991416488715823,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9979277679100059,
+            "recall": 0.9998022738507167,
+            "f1": 0.9988641414390834,
+            "support": 10115
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9995645547572393,
+            "recall": 0.9816121445370964,
+            "f1": 0.9905070118662351,
+            "support": 4677
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 145
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9710144927536232,
+            "recall": 0.9840357598978289,
+            "f1": 0.9774817633999365,
+            "support": 1566
+          },
+          "DoS Slowloris": {
+            "precision": 0.9781267526640494,
+            "recall": 0.9764837625979843,
+            "f1": 0.9773045671056318,
+            "support": 1786
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9686888454011742,
+            "recall": 0.9782608695652174,
+            "f1": 0.9734513274336283,
+            "support": 1012
+          },
+          "PortScan": {
+            "precision": 0.9946055293324343,
+            "recall": 0.991263440860215,
+            "f1": 0.9929316728374284,
+            "support": 2976
+          },
+          "SSH-Patator": {
+            "precision": 0.8743589743589744,
+            "recall": 0.9941690962099126,
+            "f1": 0.9304229195088677,
+            "support": 343
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1239
+          }
+        },
+        "confusion_matrix": [
+          [
+            10113,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            17,
+            4591,
+            0,
+            1,
+            5,
+            0,
+            13,
+            1,
+            49,
+            0
+          ],
+          [
+            0,
+            0,
+            145,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1541,
+            24,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            36,
+            1744,
+            0,
+            2,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            3,
+            7,
+            0,
+            990,
+            11,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            6,
+            3,
+            0,
+            16,
+            2950,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            341,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9991641530690119,
+          "precision": 0.9998545348752637,
+          "recall": 0.9984747239976758,
+          "fpr": 0.0001977261492832427,
+          "roc_auc": 0.9999350044218391,
+          "pr_auc": 0.9999087465382721
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999350044218391,
+          "DoS GoldenEye": 0.9993610234810316,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9997426779383629,
+          "DoS Slowloris": 0.9977753715535306,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9988781165301935,
+          "PortScan": 0.9999712709407921,
+          "SSH-Patator": 0.9999917019848357,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999330076838833,
+          "DoS GoldenEye": 0.9988798182159557,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9969313210760338,
+          "DoS Slowloris": 0.9900940037614849,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9952045110128291,
+          "PortScan": 0.9998030174621695,
+          "SSH-Patator": 0.9994805082320917,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9995655166850586,
+        "macro_pr_auc": 0.9980326187444447,
+        "stage1_threshold": 0.5750000000000001,
+        "test_macro_f1_at_argmax": 0.9847342243069868
+      }
+    ],
+    "xgboost": [
+      {
+        "macro_f1": 0.9915602958524469,
+        "macro_f1_present_only": 0.9915602958524469,
+        "weighted_f1": 0.9943690055151783,
+        "accuracy": 0.9943677249780967,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9997169544296631,
+            "recall": 0.9994340690435767,
+            "f1": 0.9995754917220886,
+            "support": 10602
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9988811814723652,
+            "recall": 0.9986577181208054,
+            "f1": 0.9987694372972368,
+            "support": 4470
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 158
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9792207792207792,
+            "recall": 0.9747899159663865,
+            "f1": 0.9770003239390994,
+            "support": 1547
+          },
+          "DoS Slowloris": {
+            "precision": 0.9706433479075578,
+            "recall": 0.9792060491493384,
+            "f1": 0.9749058971141782,
+            "support": 1587
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9794319294809011,
+            "recall": 0.9737098344693281,
+            "f1": 0.9765625,
+            "support": 1027
+          },
+          "PortScan": {
+            "precision": 0.9916079221215173,
+            "recall": 0.9919408999328408,
+            "f1": 0.9917743830787309,
+            "support": 2978
+          },
+          "SSH-Patator": {
+            "precision": 0.9940476190476191,
+            "recall": 1.0,
+            "f1": 0.9970149253731343,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10596,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            4464,
+            0,
+            2,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            158,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1508,
+            32,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            1554,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            8,
+            0,
+            1000,
+            18,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            19,
+            2954,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            334,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1242
+          ]
+        ],
+        "binary": {
+          "f1": 0.9996633878146389,
+          "precision": 0.9995512341062079,
+          "recall": 0.9997755666940974,
+          "fpr": 0.0005659309564233164,
+          "roc_auc": 0.9999997671414482,
+          "pr_auc": 0.9999998153561545
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999997671414482,
+          "DoS GoldenEye": 0.9999885097073182,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9998996016759557,
+          "DoS Slowloris": 0.9999048288927376,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999279967424733,
+          "PortScan": 0.9999774600384398,
+          "SSH-Patator": 1.0,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999997064966677,
+          "DoS GoldenEye": 0.9999572198199715,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9985796913007271,
+          "DoS Slowloris": 0.9986979497565623,
+          "FTP-Patator": 0.9999999999999999,
+          "Infiltration": 0.998475956600699,
+          "PortScan": 0.999842651173615,
+          "SSH-Patator": 1.0,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9999698164198373,
+        "macro_pr_auc": 0.9995553175148242,
+        "stage1_threshold": 0.185,
+        "test_macro_f1_at_argmax": 0.9916396659830695
+      },
+      {
+        "macro_f1": 0.989289909364134,
+        "macro_f1_present_only": 0.989289909364134,
+        "weighted_f1": 0.9931381257778494,
+        "accuracy": 0.9931449188214071,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9987414599065084,
+            "recall": 1.0,
+            "f1": 0.9993703337231268,
+            "support": 11110
+          },
+          "DoS GoldenEye": {
+            "precision": 0.997872340425532,
+            "recall": 0.9985096870342772,
+            "f1": 0.9981909119931893,
+            "support": 4697
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 275
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9774614472123369,
+            "recall": 0.9694117647058823,
+            "f1": 0.9734199645599527,
+            "support": 1700
+          },
+          "DoS Slowloris": {
+            "precision": 0.9666238767650834,
+            "recall": 0.9641485275288092,
+            "f1": 0.9653846153846154,
+            "support": 1562
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9689922480620154,
+            "recall": 0.9746588693957114,
+            "f1": 0.9718172983479106,
+            "support": 1026
+          },
+          "PortScan": {
+            "precision": 0.9916247906197655,
+            "recall": 0.992289641300704,
+            "f1": 0.9919571045576407,
+            "support": 2983
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9880239520958084,
+            "f1": 0.9939759036144579,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975688816855753,
+            "f1": 0.9987829614604462,
+            "support": 1234
+          }
+        },
+        "confusion_matrix": [
+          [
+            11110,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            4690,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            275,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            1648,
+            43,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            37,
+            1506,
+            0,
+            13,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            1000,
+            21,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            17,
+            2960,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            330,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1231
+          ]
+        ],
+        "binary": {
+          "f1": 0.9994937807347412,
+          "precision": 1.0,
+          "recall": 0.9989880737260571,
+          "fpr": 0.0,
+          "roc_auc": 0.9999998373527269,
+          "pr_auc": 0.9999998694133262
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.999999837352727,
+          "DoS GoldenEye": 0.9999985805141222,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.999897549125049,
+          "DoS Slowloris": 0.9998288534142498,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999142044295534,
+          "PortScan": 0.9999687541242037,
+          "SSH-Patator": 0.9999975669318792,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999997975185132,
+          "DoS GoldenEye": 0.9999939201487382,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9985987265799172,
+          "DoS Slowloris": 0.9975470479100851,
+          "FTP-Patator": 0.9999999999999998,
+          "Infiltration": 0.9980598599660022,
+          "PortScan": 0.9997740556536993,
+          "SSH-Patator": 0.999824713930884,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9999605345891786,
+        "macro_pr_auc": 0.9993798121707839,
+        "stage1_threshold": 0.985,
+        "test_macro_f1_at_argmax": 0.9891930887115657
+      },
+      {
+        "macro_f1": 0.9896168585703571,
+        "macro_f1_present_only": 0.9896168585703571,
+        "weighted_f1": 0.9933249436181533,
+        "accuracy": 0.9933276024397233,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9989752189305012,
+            "recall": 1.0,
+            "f1": 0.9994873467865965,
+            "support": 10723
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9993582887700535,
+            "recall": 0.9991445680068435,
+            "f1": 0.9992514169607528,
+            "support": 4676
+          },
+          "DoS SYN": {
+            "precision": 1.0,
+            "recall": 0.9955156950672646,
+            "f1": 0.9977528089887641,
+            "support": 223
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9589778076664425,
+            "recall": 0.9753761969904241,
+            "f1": 0.967107494065785,
+            "support": 1462
+          },
+          "DoS Slowloris": {
+            "precision": 0.9760793465577596,
+            "recall": 0.9581901489117984,
+            "f1": 0.9670520231213873,
+            "support": 1746
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9754178957718781,
+            "recall": 0.9841269841269841,
+            "f1": 0.9797530864197531,
+            "support": 1008
+          },
+          "PortScan": {
+            "precision": 0.9925700776764607,
+            "recall": 0.9902291105121294,
+            "f1": 0.991398212177433,
+            "support": 2968
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.988795518207283,
+            "f1": 0.9943661971830986,
+            "support": 357
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10723,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            4672,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            222,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            1426,
+            32,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            60,
+            1673,
+            0,
+            5,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            992,
+            14,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            1,
+            6,
+            0,
+            19,
+            2939,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            353,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1242
+          ]
+        ],
+        "binary": {
+          "f1": 0.9995985547972702,
+          "precision": 1.0,
+          "recall": 0.9991974317817014,
+          "fpr": 0.0,
+          "roc_auc": 0.9999998367007432,
+          "pr_auc": 0.9999998722741121
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999998367007432,
+          "DoS GoldenEye": 0.9999987765932361,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9998619323972652,
+          "DoS Slowloris": 0.9998298426457304,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999242429633425,
+          "PortScan": 0.999968467530458,
+          "SSH-Patator": 0.9999997672714815,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999997913167644,
+          "DoS GoldenEye": 0.9999948049592401,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.99797572287386,
+          "DoS Slowloris": 0.9978401655075313,
+          "FTP-Patator": 0.9999999999999998,
+          "Infiltration": 0.9983838767830732,
+          "PortScan": 0.9997790610959431,
+          "SSH-Patator": 0.9999843293654409,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9999582866102257,
+        "macro_pr_auc": 0.9993957751901853,
+        "stage1_threshold": 0.9600000000000001,
+        "test_macro_f1_at_argmax": 0.9897903892787608
+      },
+      {
+        "macro_f1": 0.9899861545415204,
+        "macro_f1_present_only": 0.9899861545415204,
+        "weighted_f1": 0.9929333718964249,
+        "accuracy": 0.992923837038898,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9989121835443038,
+            "recall": 0.9986159169550173,
+            "f1": 0.998764028279033,
+            "support": 10115
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9982817869415808,
+            "recall": 0.9937994440880906,
+            "f1": 0.996035572699025,
+            "support": 4677
+          },
+          "DoS SYN": {
+            "precision": 0.9931506849315068,
+            "recall": 1.0,
+            "f1": 0.9965635738831615,
+            "support": 145
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9653215636822194,
+            "recall": 0.9776500638569604,
+            "f1": 0.9714467005076142,
+            "support": 1566
+          },
+          "DoS Slowloris": {
+            "precision": 0.9796264855687606,
+            "recall": 0.9692049272116461,
+            "f1": 0.9743878412609063,
+            "support": 1786
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.966958211856171,
+            "recall": 0.983201581027668,
+            "f1": 0.9750122488975992,
+            "support": 1012
+          },
+          "PortScan": {
+            "precision": 0.9932818273429627,
+            "recall": 0.9936155913978495,
+            "f1": 0.9934486813371409,
+            "support": 2976
+          },
+          "SSH-Patator": {
+            "precision": 0.9884726224783862,
+            "recall": 1.0,
+            "f1": 0.9942028985507246,
+            "support": 343
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1239
+          }
+        },
+        "confusion_matrix": [
+          [
+            10101,
+            6,
+            1,
+            0,
+            0,
+            0,
+            2,
+            2,
+            3,
+            0
+          ],
+          [
+            11,
+            4648,
+            0,
+            8,
+            5,
+            0,
+            4,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            145,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1531,
+            26,
+            0,
+            7,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            46,
+            1731,
+            0,
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            995,
+            13,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            16,
+            2957,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            343,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9990921965212971,
+          "precision": 0.99898337085179,
+          "recall": 0.9992010459035444,
+          "fpr": 0.001384083044982699,
+          "roc_auc": 0.9999459297681542,
+          "pr_auc": 0.9999614826716257
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999459297681542,
+          "DoS GoldenEye": 0.999592402960277,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.9998282755084049,
+          "DoS Slowloris": 0.9997301549550868,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999242831809896,
+          "PortScan": 0.9999775230269637,
+          "SSH-Patator": 0.9999996284470821,
+          "Web Attack": 1.0
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999257347723235,
+          "DoS GoldenEye": 0.9990241858348133,
+          "DoS SYN": 1.0,
+          "DoS Slowhttptest": 0.997858059543981,
+          "DoS Slowloris": 0.9970123333147777,
+          "FTP-Patator": 0.9999999999999998,
+          "Infiltration": 0.9983939206157864,
+          "PortScan": 0.9998455002501765,
+          "SSH-Patator": 0.9999745989698415,
+          "Web Attack": 1.0
+        },
+        "macro_roc_auc_ovr": 0.9998998197846959,
+        "macro_pr_auc": 0.9992034333301699,
+        "stage1_threshold": 0.005,
+        "test_macro_f1_at_argmax": 0.9906706590971492
+      }
+    ],
+    "bilstm": [
+      {
+        "macro_f1": 0.9847455636701943,
+        "macro_f1_present_only": 0.9847455636701943,
+        "weighted_f1": 0.9938467798908747,
+        "accuracy": 0.9938253577537652,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9987750871572599,
+            "recall": 0.9998113563478589,
+            "f1": 0.9992929530992223,
+            "support": 10602
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9986583184257602,
+            "recall": 0.9991051454138703,
+            "f1": 0.9988816819503467,
+            "support": 4470
+          },
+          "DoS SYN": {
+            "precision": 0.9235294117647059,
+            "recall": 0.9936708860759493,
+            "f1": 0.9573170731707317,
+            "support": 158
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.964824120603015,
+            "recall": 0.9928894634776988,
+            "f1": 0.978655622809812,
+            "support": 1547
+          },
+          "DoS Slowloris": {
+            "precision": 0.988542329726289,
+            "recall": 0.9785759294265911,
+            "f1": 0.9835338822039266,
+            "support": 1587
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9616490891658677,
+            "recall": 0.9766309639727361,
+            "f1": 0.9690821256038648,
+            "support": 1027
+          },
+          "PortScan": {
+            "precision": 0.9996570644718793,
+            "recall": 0.9788448623237072,
+            "f1": 0.989141499830336,
+            "support": 2978
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9880239520958084,
+            "f1": 0.9939759036144579,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9959742351046699,
+            "f1": 0.9979830576845502,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10600,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4466,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            157,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1536,
+            5,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            34,
+            1553,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            6,
+            6,
+            8,
+            1,
+            1003,
+            1,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            7,
+            11,
+            5,
+            0,
+            37,
+            2915,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            330,
+            0
+          ],
+          [
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1237
+          ]
+        ],
+        "binary": {
+          "f1": 0.9994386857762976,
+          "precision": 0.9998502545672358,
+          "recall": 0.9990274556744221,
+          "fpr": 0.00018864365214110544,
+          "roc_auc": 0.9999887310573626,
+          "pr_auc": 0.9999912820314261
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999887310573625,
+          "DoS GoldenEye": 0.999995995894013,
+          "DoS SYN": 0.9999760774325662,
+          "DoS Slowhttptest": 0.9998991259911469,
+          "DoS Slowloris": 0.9999376411765755,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9993171468256135,
+          "PortScan": 0.9999567597472697,
+          "SSH-Patator": 0.9999927794083928,
+          "Web Attack": 0.9999581605285219
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999855716679352,
+          "DoS GoldenEye": 0.9999825787944159,
+          "DoS SYN": 0.9963985711825749,
+          "DoS Slowhttptest": 0.9987306509125283,
+          "DoS Slowloris": 0.9991602324790886,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9961984778849639,
+          "PortScan": 0.999700837084393,
+          "SSH-Patator": 0.9995518405769301,
+          "Web Attack": 0.9993993042415165
+        },
+        "macro_roc_auc_ovr": 0.9999022418061461,
+        "macro_pr_auc": 0.9989108064824345,
+        "stage1_threshold": 0.98,
+        "test_macro_f1_at_argmax": 0.9847714777059444
+      },
+      {
+        "macro_f1": 0.9835579799256081,
+        "macro_f1_present_only": 0.9835579799256081,
+        "weighted_f1": 0.9926806404144451,
+        "accuracy": 0.9926638604930847,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9989205720967888,
+            "recall": 0.9995499549954996,
+            "f1": 0.9992351644396454,
+            "support": 11110
+          },
+          "DoS GoldenEye": {
+            "precision": 1.0,
+            "recall": 0.9993612944432616,
+            "f1": 0.9996805452028538,
+            "support": 4697
+          },
+          "DoS SYN": {
+            "precision": 0.9547038327526133,
+            "recall": 0.9963636363636363,
+            "f1": 0.9750889679715302,
+            "support": 275
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9722877358490566,
+            "recall": 0.97,
+            "f1": 0.9711425206124853,
+            "support": 1700
+          },
+          "DoS Slowloris": {
+            "precision": 0.9692504804612428,
+            "recall": 0.9686299615877081,
+            "f1": 0.9689401216778738,
+            "support": 1562
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9527410207939508,
+            "recall": 0.9824561403508771,
+            "f1": 0.9673704414587332,
+            "support": 1026
+          },
+          "PortScan": {
+            "precision": 0.9976206662134602,
+            "recall": 0.9839088166275561,
+            "f1": 0.9907172995780591,
+            "support": 2983
+          },
+          "SSH-Patator": {
+            "precision": 0.9850299401197605,
+            "recall": 0.9850299401197605,
+            "f1": 0.9850299401197605,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975688816855753,
+            "f1": 0.9987829614604462,
+            "support": 1234
+          }
+        },
+        "confusion_matrix": [
+          [
+            11105,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            0
+          ],
+          [
+            1,
+            4694,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            274,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1649,
+            38,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            39,
+            1513,
+            1,
+            8,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            3,
+            3,
+            5,
+            0,
+            1008,
+            6,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            10,
+            3,
+            5,
+            0,
+            27,
+            2935,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            329,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1231
+          ]
+        ],
+        "binary": {
+          "f1": 0.9993854607237104,
+          "precision": 0.9996384148105294,
+          "recall": 0.9991326346223347,
+          "fpr": 0.00045004500450045,
+          "roc_auc": 0.9999950360052269,
+          "pr_auc": 0.9999960897954486
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999950360052269,
+          "DoS GoldenEye": 0.9999997266175346,
+          "DoS SYN": 0.9999176032722851,
+          "DoS Slowhttptest": 0.9998408639429098,
+          "DoS Slowloris": 0.9998451850313351,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9998905907828787,
+          "PortScan": 0.9999351193966427,
+          "SSH-Patator": 0.9999399032174163,
+          "Web Attack": 0.9999950785003124
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999937434371337,
+          "DoS GoldenEye": 0.9999988236211206,
+          "DoS SYN": 0.9826067481520288,
+          "DoS Slowhttptest": 0.99797683356671,
+          "DoS Slowloris": 0.9977467161452679,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9977807380202036,
+          "PortScan": 0.9995510847018021,
+          "SSH-Patator": 0.9971227864019296,
+          "Web Attack": 0.999908992484687
+        },
+        "macro_roc_auc_ovr": 0.9999359106766542,
+        "macro_pr_auc": 0.9972686466530885,
+        "stage1_threshold": 0.895,
+        "test_macro_f1_at_argmax": 0.9831158396748574
+      },
+      {
+        "macro_f1": 0.9874394141739382,
+        "macro_f1_present_only": 0.9874394141739382,
+        "weighted_f1": 0.9946448706631146,
+        "accuracy": 0.9946375209791641,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9987888950996833,
+            "recall": 0.9998134850321738,
+            "f1": 0.9993009274362679,
+            "support": 10723
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9993587002992732,
+            "recall": 0.9997861420017109,
+            "f1": 0.9995723754543511,
+            "support": 4676
+          },
+          "DoS SYN": {
+            "precision": 0.9529914529914529,
+            "recall": 1.0,
+            "f1": 0.975929978118162,
+            "support": 223
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.978796169630643,
+            "recall": 0.978796169630643,
+            "f1": 0.978796169630643,
+            "support": 1462
+          },
+          "DoS Slowloris": {
+            "precision": 0.9757199322416714,
+            "recall": 0.9896907216494846,
+            "f1": 0.9826556724481091,
+            "support": 1746
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9752964426877471,
+            "recall": 0.9791666666666666,
+            "f1": 0.9772277227722772,
+            "support": 1008
+          },
+          "PortScan": {
+            "precision": 0.9986315429353404,
+            "recall": 0.9834905660377359,
+            "f1": 0.9910032252588694,
+            "support": 2968
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9831932773109243,
+            "f1": 0.9915254237288136,
+            "support": 357
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975845410628019,
+            "f1": 0.9987908101571947,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10721,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4675,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            223,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1431,
+            29,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            18,
+            1728,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            6,
+            5,
+            1,
+            987,
+            4,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            6,
+            7,
+            9,
+            0,
+            23,
+            2919,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            351,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9994525747235502,
+          "precision": 0.9998539612997445,
+          "recall": 0.9990515102874653,
+          "fpr": 0.00018651496782616804,
+          "roc_auc": 0.9999882764741876,
+          "pr_auc": 0.9999908095857811
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999882764741878,
+          "DoS GoldenEye": 0.9999970335092628,
+          "DoS SYN": 0.9999877731089168,
+          "DoS Slowhttptest": 0.9999370416496589,
+          "DoS Slowloris": 0.9999538310250362,
+          "FTP-Patator": 0.9999965853991668,
+          "Infiltration": 0.9998757855689137,
+          "PortScan": 0.9999591184711539,
+          "SSH-Patator": 0.9999710252994517,
+          "Web Attack": 0.999985554679808
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999852742142461,
+          "DoS GoldenEye": 0.9999873757863786,
+          "DoS SYN": 0.9986499038384514,
+          "DoS Slowhttptest": 0.9990650770460408,
+          "DoS Slowloris": 0.9994075559949739,
+          "FTP-Patator": 0.9965972222222222,
+          "Infiltration": 0.9978662724517174,
+          "PortScan": 0.9997113808242777,
+          "SSH-Patator": 0.9986785098948731,
+          "Web Attack": 0.9997661693438522
+        },
+        "macro_roc_auc_ovr": 0.9999652025185556,
+        "macro_pr_auc": 0.9989714741617034,
+        "stage1_threshold": 0.905,
+        "test_macro_f1_at_argmax": 0.9874447595661673
+      },
+      {
+        "macro_f1": 0.9764263785320493,
+        "macro_f1_present_only": 0.9764263785320493,
+        "weighted_f1": 0.987241098693936,
+        "accuracy": 0.9871875392538626,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9960521121200158,
+            "recall": 0.9977261492832427,
+            "f1": 0.9968884279152467,
+            "support": 10115
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9991256830601093,
+            "recall": 0.9773358990806073,
+            "f1": 0.9881106787721574,
+            "support": 4677
+          },
+          "DoS SYN": {
+            "precision": 0.9056603773584906,
+            "recall": 0.993103448275862,
+            "f1": 0.9473684210526315,
+            "support": 145
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9560577526679221,
+            "recall": 0.9725415070242657,
+            "f1": 0.9642291864514086,
+            "support": 1566
+          },
+          "DoS Slowloris": {
+            "precision": 0.9698324022346368,
+            "recall": 0.9720044792833147,
+            "f1": 0.970917225950783,
+            "support": 1786
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9619140625,
+            "recall": 0.9733201581027668,
+            "f1": 0.9675834970530451,
+            "support": 1012
+          },
+          "PortScan": {
+            "precision": 0.982573726541555,
+            "recall": 0.9852150537634409,
+            "f1": 0.9838926174496644,
+            "support": 2976
+          },
+          "SSH-Patator": {
+            "precision": 0.9135135135135135,
+            "recall": 0.9854227405247813,
+            "f1": 0.9481065918653576,
+            "support": 343
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9943502824858758,
+            "f1": 0.9971671388101983,
+            "support": 1239
+          }
+        },
+        "confusion_matrix": [
+          [
+            10092,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            22,
+            0
+          ],
+          [
+            22,
+            4571,
+            0,
+            6,
+            5,
+            0,
+            21,
+            43,
+            9,
+            0
+          ],
+          [
+            0,
+            0,
+            144,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            1523,
+            40,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            48,
+            1736,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            7,
+            4,
+            0,
+            985,
+            9,
+            1,
+            0
+          ],
+          [
+            5,
+            0,
+            9,
+            9,
+            5,
+            0,
+            16,
+            2932,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            338,
+            0
+          ],
+          [
+            6,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1232
+          ]
+        ],
+        "binary": {
+          "f1": 0.9977106726261855,
+          "precision": 0.9983273943713185,
+          "recall": 0.9970947123765252,
+          "fpr": 0.002273850716757291,
+          "roc_auc": 0.9999252351588345,
+          "pr_auc": 0.9999451076220895
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999252351588341,
+          "DoS GoldenEye": 0.999876561986823,
+          "DoS SYN": 0.9999430565280171,
+          "DoS Slowhttptest": 0.9995864047881762,
+          "DoS Slowloris": 0.999500687212307,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9998294265326941,
+          "PortScan": 0.9999003844984778,
+          "SSH-Patator": 0.9999296526475623,
+          "Web Attack": 0.9999601510070104
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999011049832779,
+          "DoS GoldenEye": 0.9995536794104393,
+          "DoS SYN": 0.988825666032142,
+          "DoS Slowhttptest": 0.9937663971450731,
+          "DoS Slowloris": 0.9954137740529649,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9963223634180742,
+          "PortScan": 0.9993453171325059,
+          "SSH-Patator": 0.9953577112315442,
+          "Web Attack": 0.9993858492365439
+        },
+        "macro_roc_auc_ovr": 0.9998451560359902,
+        "macro_pr_auc": 0.9967871862642566,
+        "stage1_threshold": 0.895,
+        "test_macro_f1_at_argmax": 0.9746737271357848
+      }
+    ],
+    "vanilla_transformer": [
+      {
+        "macro_f1": 0.9864965752602017,
+        "macro_f1_present_only": 0.9864965752602017,
+        "weighted_f1": 0.9945481466806776,
+        "accuracy": 0.9945346072009679,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9993401206636501,
+            "recall": 0.9999056781739295,
+            "f1": 0.9996228194247996,
+            "support": 10602
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9988811814723652,
+            "recall": 0.9986577181208054,
+            "f1": 0.9987694372972368,
+            "support": 4470
+          },
+          "DoS SYN": {
+            "precision": 0.9401197604790419,
+            "recall": 0.9936708860759493,
+            "f1": 0.9661538461538461,
+            "support": 158
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.969046114971573,
+            "recall": 0.9915966386554622,
+            "f1": 0.9801916932907349,
+            "support": 1547
+          },
+          "DoS Slowloris": {
+            "precision": 0.9879594423320659,
+            "recall": 0.982356647763075,
+            "f1": 0.9851500789889416,
+            "support": 1587
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 0.9583333333333334,
+            "f1": 0.9787234042553191,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9681159420289855,
+            "recall": 0.9756572541382668,
+            "f1": 0.9718719689621726,
+            "support": 1027
+          },
+          "PortScan": {
+            "precision": 0.9976141785957737,
+            "recall": 0.9828744123572868,
+            "f1": 0.9901894451962111,
+            "support": 2978
+          },
+          "SSH-Patator": {
+            "precision": 0.996996996996997,
+            "recall": 0.9940119760479041,
+            "f1": 0.9955022488755623,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975845410628019,
+            "f1": 0.9987908101571947,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10601,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            4464,
+            0,
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            157,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            1534,
+            7,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            26,
+            1559,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            23,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            6,
+            9,
+            0,
+            1002,
+            5,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            5,
+            11,
+            2,
+            0,
+            30,
+            2927,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            332,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9997006884166417,
+          "precision": 0.9999251553027468,
+          "recall": 0.9994763222862273,
+          "fpr": 9.432182607055272e-05,
+          "roc_auc": 0.9999950041256186,
+          "pr_auc": 0.9999960212963812
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999950041256185,
+          "DoS GoldenEye": 0.9999969252137406,
+          "DoS SYN": 0.9999832542027964,
+          "DoS Slowhttptest": 0.9999347014489706,
+          "DoS Slowloris": 0.9999453269367539,
+          "FTP-Patator": 0.999787707941811,
+          "Infiltration": 0.9999063299797457,
+          "PortScan": 0.9999614149132129,
+          "SSH-Patator": 0.9999863188790603,
+          "Web Attack": 0.9999902221048875
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999938061147332,
+          "DoS GoldenEye": 0.9999867105141506,
+          "DoS SYN": 0.997510795043817,
+          "DoS Slowhttptest": 0.9990781656869444,
+          "DoS Slowloris": 0.9992742544387876,
+          "FTP-Patator": 0.9651826484018264,
+          "Infiltration": 0.9979761365642478,
+          "PortScan": 0.9997323151013743,
+          "SSH-Patator": 0.9990419154242498,
+          "Web Attack": 0.9998346779494454
+        },
+        "macro_roc_auc_ovr": 0.9999487205746597,
+        "macro_pr_auc": 0.9957611425239576,
+        "stage1_threshold": 0.665,
+        "test_macro_f1_at_argmax": 0.9864989002965023
+      },
+      {
+        "macro_f1": 0.9862416252195778,
+        "macro_f1_present_only": 0.9862416252195778,
+        "weighted_f1": 0.9922504992376221,
+        "accuracy": 0.9922228903587893,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9978442468337375,
+            "recall": 0.9999099909990999,
+            "f1": 0.9988760508924156,
+            "support": 11110
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9997863247863248,
+            "recall": 0.99616776665957,
+            "f1": 0.9979737655966727,
+            "support": 4697
+          },
+          "DoS SYN": {
+            "precision": 0.9581881533101045,
+            "recall": 1.0,
+            "f1": 0.9786476868327402,
+            "support": 275
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9701230228471002,
+            "recall": 0.9741176470588235,
+            "f1": 0.9721162312885236,
+            "support": 1700
+          },
+          "DoS Slowloris": {
+            "precision": 0.974176888315042,
+            "recall": 0.9660691421254801,
+            "f1": 0.970106075216972,
+            "support": 1562
+          },
+          "FTP-Patator": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9397590361445783,
+            "recall": 0.9883040935672515,
+            "f1": 0.9634204275534441,
+            "support": 1026
+          },
+          "PortScan": {
+            "precision": 1.0,
+            "recall": 0.9802212537713711,
+            "f1": 0.9900118503470459,
+            "support": 2983
+          },
+          "SSH-Patator": {
+            "precision": 0.9969788519637462,
+            "recall": 0.9880239520958084,
+            "f1": 0.9924812030075187,
+            "support": 334
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9975688816855753,
+            "f1": 0.9987829614604462,
+            "support": 1234
+          }
+        },
+        "confusion_matrix": [
+          [
+            11109,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            16,
+            4679,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            275,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1656,
+            31,
+            0,
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            1509,
+            0,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            3,
+            4,
+            0,
+            1014,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            7,
+            3,
+            5,
+            0,
+            41,
+            2924,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            330,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1231
+          ]
+        ],
+        "binary": {
+          "f1": 0.9990957427568995,
+          "precision": 0.9999275991891109,
+          "recall": 0.9982652692446693,
+          "fpr": 9.000900090009e-05,
+          "roc_auc": 0.999951238347543,
+          "pr_auc": 0.9999695727048484
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999512383475426,
+          "DoS GoldenEye": 0.9999701539950809,
+          "DoS SYN": 0.9999389763054132,
+          "DoS Slowhttptest": 0.9998865663710095,
+          "DoS Slowloris": 0.9998859661606703,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9999032635078413,
+          "PortScan": 0.9999344172421306,
+          "SSH-Patator": 0.9999211685928862,
+          "Web Attack": 0.9999900202923002
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.999920994519384,
+          "DoS GoldenEye": 0.9999063384371727,
+          "DoS SYN": 0.9792052218288557,
+          "DoS Slowhttptest": 0.9984700691882813,
+          "DoS Slowloris": 0.9983369140640502,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9978517153949096,
+          "PortScan": 0.999547330427571,
+          "SSH-Patator": 0.9973330496974386,
+          "Web Attack": 0.9998270950341442
+        },
+        "macro_roc_auc_ovr": 0.9999381770814875,
+        "macro_pr_auc": 0.9970398728591807,
+        "stage1_threshold": 0.925,
+        "test_macro_f1_at_argmax": 0.9854372429064702
+      },
+      {
+        "macro_f1": 0.9844716104189134,
+        "macro_f1_present_only": 0.9844716104189134,
+        "weighted_f1": 0.9930184635548153,
+        "accuracy": 0.993000122804863,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.9982309124767226,
+            "recall": 0.9998134850321738,
+            "f1": 0.9990215720076411,
+            "support": 10723
+          },
+          "DoS GoldenEye": {
+            "precision": 0.9991410779471763,
+            "recall": 0.9950812660393499,
+            "f1": 0.9971070395371263,
+            "support": 4676
+          },
+          "DoS SYN": {
+            "precision": 0.9482758620689655,
+            "recall": 0.9865470852017937,
+            "f1": 0.967032967032967,
+            "support": 223
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9671140939597316,
+            "recall": 0.9856361149110807,
+            "f1": 0.9762872628726287,
+            "support": 1462
+          },
+          "DoS Slowloris": {
+            "precision": 0.9816197587593337,
+            "recall": 0.9788087056128293,
+            "f1": 0.9802122168052767,
+            "support": 1746
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.9619883040935673,
+            "recall": 0.9791666666666666,
+            "f1": 0.9705014749262537,
+            "support": 1008
+          },
+          "PortScan": {
+            "precision": 1.0,
+            "recall": 0.9814690026954178,
+            "f1": 0.9906478490052713,
+            "support": 2968
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9831932773109243,
+            "f1": 0.9915254237288136,
+            "support": 357
+          },
+          "Web Attack": {
+            "precision": 0.9880382775119617,
+            "recall": 0.9975845410628019,
+            "f1": 0.9927884615384616,
+            "support": 1242
+          }
+        },
+        "confusion_matrix": [
+          [
+            10721,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            4653,
+            0,
+            0,
+            1,
+            0,
+            5,
+            0,
+            0,
+            15
+          ],
+          [
+            0,
+            0,
+            220,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            1441,
+            17,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            1709,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            6,
+            5,
+            5,
+            1,
+            987,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            6,
+            7,
+            9,
+            0,
+            30,
+            2913,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            351,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1239
+          ]
+        ],
+        "binary": {
+          "f1": 0.9992334367585326,
+          "precision": 0.9998538972897947,
+          "recall": 0.998613745804757,
+          "fpr": 0.00018651496782616804,
+          "roc_auc": 0.9999858405936071,
+          "pr_auc": 0.9999887922366498
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.999985840593607,
+          "DoS GoldenEye": 0.9999553835462487,
+          "DoS SYN": 0.9999790660804181,
+          "DoS Slowhttptest": 0.9999062474518099,
+          "DoS Slowloris": 0.999922723463015,
+          "FTP-Patator": 0.9999982926995835,
+          "Infiltration": 0.9993928424023211,
+          "PortScan": 0.9999587416828695,
+          "SSH-Patator": 0.9999982545361115,
+          "Web Attack": 0.999976248560069
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.999982593878936,
+          "DoS GoldenEye": 0.999790141686478,
+          "DoS SYN": 0.9977038143244512,
+          "DoS Slowhttptest": 0.9985716971182222,
+          "DoS Slowloris": 0.9990215711065447,
+          "FTP-Patator": 0.9983333333333333,
+          "Infiltration": 0.9969669106844469,
+          "PortScan": 0.9997094717459419,
+          "SSH-Patator": 0.9998831750268351,
+          "Web Attack": 0.9996401123629298
+        },
+        "macro_roc_auc_ovr": 0.9999073641016052,
+        "macro_pr_auc": 0.9989602821268118,
+        "stage1_threshold": 0.995,
+        "test_macro_f1_at_argmax": 0.9847105924835737
+      },
+      {
+        "macro_f1": 0.9788752210728286,
+        "macro_f1_present_only": 0.9788752210728286,
+        "weighted_f1": 0.9868535899874518,
+        "accuracy": 0.986852572959846,
+        "per_class": {
+          "BENIGN": {
+            "precision": 0.983852140077821,
+            "recall": 0.9999011369253584,
+            "f1": 0.9918117185584702,
+            "support": 10115
+          },
+          "DoS GoldenEye": {
+            "precision": 1.0,
+            "recall": 0.9722044045328202,
+            "f1": 0.985906331309627,
+            "support": 4677
+          },
+          "DoS SYN": {
+            "precision": 0.8734939759036144,
+            "recall": 1.0,
+            "f1": 0.932475884244373,
+            "support": 145
+          },
+          "DoS Slowhttptest": {
+            "precision": 0.9727979274611399,
+            "recall": 0.9591315453384419,
+            "f1": 0.9659163987138264,
+            "support": 1566
+          },
+          "DoS Slowloris": {
+            "precision": 0.9722991689750693,
+            "recall": 0.9826427771556551,
+            "f1": 0.9774436090225563,
+            "support": 1786
+          },
+          "FTP-Patator": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Infiltration": {
+            "precision": 0.974155069582505,
+            "recall": 0.9683794466403162,
+            "f1": 0.9712586719524281,
+            "support": 1012
+          },
+          "PortScan": {
+            "precision": 0.9972742759795571,
+            "recall": 0.9835349462365591,
+            "f1": 0.9903569615970225,
+            "support": 2976
+          },
+          "SSH-Patator": {
+            "precision": 1.0,
+            "recall": 0.9912536443148688,
+            "f1": 0.9956076134699854,
+            "support": 343
+          },
+          "Web Attack": {
+            "precision": 1.0,
+            "recall": 0.9967715899919289,
+            "f1": 0.9983831851253031,
+            "support": 1239
+          }
+        },
+        "confusion_matrix": [
+          [
+            10114,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            99,
+            4547,
+            3,
+            20,
+            5,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            145,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            32,
+            0,
+            0,
+            1502,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            0,
+            0,
+            22,
+            1755,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            0,
+            9,
+            0,
+            7,
+            1,
+            980,
+            8,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            9,
+            0,
+            5,
+            0,
+            22,
+            2927,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            340,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1235
+          ]
+        ],
+        "binary": {
+          "f1": 0.9938986518578057,
+          "precision": 0.9999264868043813,
+          "recall": 0.9879430563625798,
+          "fpr": 9.886307464162135e-05,
+          "roc_auc": 0.999977488688335,
+          "pr_auc": 0.9999818887635655
+        },
+        "per_class_roc_auc": {
+          "BENIGN": 0.9999774886883351,
+          "DoS GoldenEye": 0.9999275269240817,
+          "DoS SYN": 0.9999503197259741,
+          "DoS Slowhttptest": 0.9998008922977982,
+          "DoS Slowloris": 0.9998973147054312,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9998826119273886,
+          "PortScan": 0.9999319985177574,
+          "SSH-Patator": 0.9999874910517672,
+          "Web Attack": 0.9999700954337046
+        },
+        "per_class_pr_auc": {
+          "BENIGN": 0.9999749284484186,
+          "DoS GoldenEye": 0.999707102434269,
+          "DoS SYN": 0.9908237399345154,
+          "DoS Slowhttptest": 0.9974271774976049,
+          "DoS Slowloris": 0.9987184490278981,
+          "FTP-Patator": 1.0,
+          "Infiltration": 0.9974482567190258,
+          "PortScan": 0.9995473000587984,
+          "SSH-Patator": 0.9992318030165415,
+          "Web Attack": 0.9995750382293389
+        },
+        "macro_roc_auc_ovr": 0.9999325739272239,
+        "macro_pr_auc": 0.998245379536641,
+        "stage1_threshold": 0.99,
+        "test_macro_f1_at_argmax": 0.9734482479423573
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+data/raw/
+data/processed/
+data/splits/
+data/nsm/*.csv
+data/unsw_nb15/
+data/cicids2018/
+results/checkpoints/
+results/logs/
+*.pt
+*.pkl
+*.npz
+__pycache__/
+*.pyc
+manuscript/*.docx
+manuscript/*.pdf
+manuscript/_build*.md

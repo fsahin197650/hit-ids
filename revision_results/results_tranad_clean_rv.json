@@ -1,0 +1,84 @@
+{
+  "model": "TranAD",
+  "reference": "Tuli et al., VLDB 2022",
+  "comparison_mode": "binary (BENIGN vs ATTACK)",
+  "config": {
+    "window_size": 10,
+    "d_model": 64,
+    "nhead": 8,
+    "num_layers": 1,
+    "d_ff": 128,
+    "dropout": 0.1,
+    "epochs": 30,
+    "batch_size": 256,
+    "lr": 0.001,
+    "seed": 42,
+    "n_folds": 5,
+    "window_label_rule": "any_attack"
+  },
+  "per_fold": [
+    {
+      "binary_precision": 0.0,
+      "binary_recall": 0.0,
+      "binary_f1": 0.0,
+      "roc_auc": NaN,
+      "threshold": NaN,
+      "n_test_windows": 50416,
+      "attack_ratio": 0.23171215487146937
+    },
+    {
+      "binary_precision": 0.0,
+      "binary_recall": 0.0,
+      "binary_f1": 0.0,
+      "roc_auc": NaN,
+      "threshold": NaN,
+      "n_test_windows": 50416,
+      "attack_ratio": 0.23220802919708028
+    },
+    {
+      "binary_precision": 0.0,
+      "binary_recall": 0.0,
+      "binary_f1": 0.0,
+      "roc_auc": NaN,
+      "threshold": NaN,
+      "n_test_windows": 50416,
+      "attack_ratio": 0.23234687400825135
+    },
+    {
+      "binary_precision": 0.0,
+      "binary_recall": 0.0,
+      "binary_f1": 0.0,
+      "roc_auc": NaN,
+      "threshold": NaN,
+      "n_test_windows": 50415,
+      "attack_ratio": 0.2331052266190618
+    },
+    {
+      "binary_precision": 0.0,
+      "binary_recall": 0.0,
+      "binary_f1": 0.0,
+      "roc_auc": NaN,
+      "threshold": NaN,
+      "n_test_windows": 50415,
+      "attack_ratio": 0.23320440345135376
+    }
+  ],
+  "aggregate": {
+    "mean_binary_f1": 0.0,
+    "std_binary_f1": 0.0,
+    "mean_precision": 0.0,
+    "std_precision": 0.0,
+    "mean_recall": 0.0,
+    "std_recall": 0.0,
+    "mean_roc_auc": null,
+    "std_roc_auc": null
+  },
+  "notes": [
+    "TranAD is an UNSUPERVISED anomaly detector \u2014 it does not do 13-class classification.",
+    "Window size = 10: a window is ATTACK if ANY flow in it is an attack.",
+    "Trained on BENIGN-only windows from the train fold.",
+    "Threshold determined by 98th percentile of training reconstruction error (POT-inspired).",
+    "Compare with HiT-IDS Stage-1 binary detector, NOT the 13-class cascade."
+  ],
+  "protocol": "clean: real rows only, RobustScaler fit inside training fold"
+}

@@ -1,0 +1,255 @@
+{
+  "artifacts": "results/tables/misclass_artifacts_clean.npz",
+  "error_groups": {
+    "G1-BENIGN->PortSc": {
+      "desc": "BENIGN \u2192 PortScan (false positive)",
+      "n": 158,
+      "n_correct_of_true_class": 313888,
+      "group_attention_misclassified": {
+        "temporal": 0.1665000021457672,
+        "volume": 0.31029999256134033,
+        "protocol": 0.2883000075817108,
+        "behavioral": 0.23489999771118164
+      },
+      "group_attention_correct": {
+        "temporal": 0.16779999434947968,
+        "volume": 0.35989999771118164,
+        "protocol": 0.3059000074863434,
+        "behavioral": 0.1664000004529953
+      },
+      "group_attention_delta": {
+        "temporal": -0.0013000000035390258,
+        "volume": -0.04960000142455101,
+        "protocol": -0.01759999990463257,
+        "behavioral": 0.06849999725818634
+      },
+      "top5_divergent_feature_idx": [
+        47,
+        32,
+        58,
+        50,
+        52
+      ],
+      "confidence_mean": 0.9246446886394597
+    },
+    "G2-DoS Hu->BENIGN": {
+      "desc": "DoS Hulk \u2192 BENIGN (false negative at Stage 1)",
+      "n": 139,
+      "n_correct_of_true_class": 25763,
+      "group_attention_misclassified": {
+        "temporal": 0.23479999601840973,
+        "volume": 0.2619999945163727,
+        "protocol": 0.21619999408721924,
+        "behavioral": 0.2870999872684479
+      },
+      "group_attention_correct": {
+        "temporal": 0.17239999771118164,
+        "volume": 0.3885999917984009,
+        "protocol": 0.3052999973297119,
+        "behavioral": 0.13359999656677246
+      },
+      "group_attention_delta": {
+        "temporal": 0.062300000339746475,
+        "volume": -0.1265999972820282,
+        "protocol": -0.08919999748468399,
+        "behavioral": 0.1535000056028366
+      },
+      "top5_divergent_feature_idx": [
+        60,
+        59,
+        22,
+        55,
+        29
+      ],
+      "confidence_mean": 0.5361155545968803
+    },
+    "G3-BENIGN->Bot": {
+      "desc": "BENIGN \u2192 Bot (false positive)",
+      "n": 116,
+      "n_correct_of_true_class": 313888,
+      "group_attention_misclassified": {
+        "temporal": 0.1973000019788742,
+        "volume": 0.17520000040531158,
+        "protocol": 0.4341000020503998,
+        "behavioral": 0.19339999556541443
+      },
+      "group_attention_correct": {
+        "temporal": 0.16779999434947968,
+        "volume": 0.35989999771118164,
+        "protocol": 0.3059000074863434,
+        "behavioral": 0.1664000004529953
+      },
+      "group_attention_delta": {
+        "temporal": 0.029500000178813934,
+        "volume": -0.18469999730587006,
+        "protocol": 0.1281999945640564,
+        "behavioral": 0.027000000700354576
+      },
+      "top5_divergent_feature_idx": [
+        50,
+        55,
+        52,
+        23,
+        32
+      ],
+      "confidence_mean": 0.9238922205464594
+    },
+    "G4-Bot->BENIGN": {
+      "desc": "Bot \u2192 BENIGN (false negative at Stage 1)",
+      "n": 106,
+      "n_correct_of_true_class": 186,
+      "group_attention_misclassified": {
+        "temporal": 0.1371999979019165,
+        "volume": 0.2020999938249588,
+        "protocol": 0.3327000141143799,
+        "behavioral": 0.328000009059906
+      },
+      "group_attention_correct": {
+        "temporal": 0.19009999930858612,
+        "volume": 0.1348000019788742,
+        "protocol": 0.4706999957561493,
+        "behavioral": 0.20440000295639038
+      },
+      "group_attention_delta": {
+        "temporal": -0.05290000140666962,
+        "volume": 0.06729999929666519,
+        "protocol": -0.1379999965429306,
+        "behavioral": 0.12359999865293503
+      },
+      "top5_divergent_feature_idx": [
+        50,
+        52,
+        60,
+        51,
+        56
+      ],
+      "confidence_mean": 0.5542282490235455
+    },
+    "G5-BENIGN->DoS Hu": {
+      "desc": "BENIGN \u2192 DoS Hulk (false positive)",
+      "n": 39,
+      "n_correct_of_true_class": 313888,
+      "group_attention_misclassified": {
+        "temporal": 0.18569999933242798,
+        "volume": 0.15860000252723694,
+        "protocol": 0.553600013256073,
+        "behavioral": 0.10209999978542328
+      },
+      "group_attention_correct": {
+        "temporal": 0.16779999434947968,
+        "volume": 0.35989999771118164,
+        "protocol": 0.3059000074863434,
+        "behavioral": 0.1664000004529953
+      },
+      "group_attention_delta": {
+        "temporal": 0.017899999395012856,
+        "volume": -0.2012999951839447,
+        "protocol": 0.24770000576972961,
+        "behavioral": -0.06430000066757202
+      },
+      "top5_divergent_feature_idx": [
+        49,
+        55,
+        51,
+        32,
+        23
+      ],
+      "confidence_mean": 0.9075057353728857
+    },
+    "G6-DoS Go->BENIGN": {
+      "desc": "DoS GoldenEye \u2192 BENIGN (false negative at Stage 1)",
+      "n": 32,
+      "n_correct_of_true_class": 1508,
+      "group_attention_misclassified": {
+        "temporal": 0.47530001401901245,
+        "volume": 0.049300000071525574,
+        "protocol": 0.2387000024318695,
+        "behavioral": 0.23669999837875366
+      },
+      "group_attention_correct": {
+        "temporal": 0.34880000352859497,
+        "volume": 0.2985000014305115,
+        "protocol": 0.22599999606609344,
+        "behavioral": 0.12680000066757202
+      },
+      "group_attention_delta": {
+        "temporal": 0.1264999955892563,
+        "volume": -0.249099999666214,
+        "protocol": 0.01269999984651804,
+        "behavioral": 0.10989999771118164
+      },
+      "top5_divergent_feature_idx": [
+        22,
+        29,
+        60,
+        3,
+        59
+      ],
+      "confidence_mean": 0.5821557082235813
+    }
+  },
+  "stage1": {
+    "Bot": {
+      "missed": 106,
+      "total": 292
+    },
+    "DDoS": {
+      "missed": 26,
+      "total": 19202
+    },
+    "DoS GoldenEye": {
+      "missed": 32,
+      "total": 1543
+    },
+    "DoS Hulk": {
+      "missed": 139,
+      "total": 25927
+    },
+    "DoS Slowhttptest": {
+      "missed": 1,
+      "total": 784
+    },
+    "DoS slowloris": {
+      "missed": 1,
+      "total": 808
+    },
+    "FTP-Patator": {
+      "missed": 0,
+      "total": 890
+    },
+    "Heartbleed": {
+      "missed": 0,
+      "total": 1
+    },
+    "Infiltration": {
+      "missed": 5,
+      "total": 6
+    },
+    "PortScan": {
+      "missed": 6,
+      "total": 13604
+    },
+    "SSH-Patator": {
+      "missed": 2,
+      "total": 483
+    },
+    "Web Attack": {
+      "missed": 6,
+      "total": 321
+    },
+    "BENIGN_false_positive": {
+      "count": 371,
+      "total": 314259
+    }
+  },
+  "confidence": {
+    "correct_mean": 0.9450831015344829,
+    "correct_std": 0.0561805156581023,
+    "misclassified_mean": 0.7427191519208493,
+    "misclassified_std": 0.18550986659271657
+  },
+  "totals": {
+    "n": 378120,
+    "misclassified": 744
+  }
+}

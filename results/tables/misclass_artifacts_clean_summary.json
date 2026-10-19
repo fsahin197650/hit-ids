@@ -1,0 +1,59 @@
+{
+  "total_samples": 378120,
+  "correct": 377376,
+  "misclassified": 744,
+  "accuracy": 0.9980323706759758,
+  "top_confusion_pairs": [
+    {
+      "true": "BENIGN",
+      "predicted": "PortScan",
+      "count": 158
+    },
+    {
+      "true": "DoS Hulk",
+      "predicted": "BENIGN",
+      "count": 139
+    },
+    {
+      "true": "BENIGN",
+      "predicted": "Bot",
+      "count": 116
+    },
+    {
+      "true": "Bot",
+      "predicted": "BENIGN",
+      "count": 106
+    },
+    {
+      "true": "BENIGN",
+      "predicted": "DoS Hulk",
+      "count": 39
+    },
+    {
+      "true": "DoS GoldenEye",
+      "predicted": "BENIGN",
+      "count": 32
+    },
+    {
+      "true": "DDoS",
+      "predicted": "BENIGN",
+      "count": 26
+    },
+    {
+      "true": "BENIGN",
+      "predicted": "DoS Slowhttptest",
+      "count": 26
+    },
+    {
+      "true": "DoS Hulk",
+      "predicted": "DoS GoldenEye",
+      "count": 20
+    },
+    {
+      "true": "BENIGN",
+      "predicted": "SSH-Patator",
+      "count": 18
+    }
+  ],
+  "stage1_threshold": 0.5750000000000001
+}

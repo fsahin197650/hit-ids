@@ -1,0 +1,151 @@
+{
+  "protocol": {
+    "n_explain_samples": 100,
+    "n_background": 100,
+    "repeats": 5,
+    "warmup": 2,
+    "statistic": "median over repeats",
+    "data": "data/splits/test.pt attack rows (real)",
+    "hit_ids_checkpoint": "results/checkpoints/hit_ids_attack_merged.pt"
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cpu": "x86_64",
+    "torch": "2.13.0+cu130",
+    "shap": "0.49.1"
+  },
+  "results_ms_per_sample": {
+    "HiT-IDS prediction only (no explanation)": {
+      "type": "reference",
+      "single_ms_per_sample": {
+        "median": 1.8196139199426398,
+        "min": 1.8119832896627486,
+        "max": 1.830472380388528
+      },
+      "batched_ms_per_sample": {
+        "median": 0.01905589015223086,
+        "min": 0.018850690103136003,
+        "max": 0.019374690018594265
+      }
+    },
+    "HiT-IDS attention rollout": {
+      "type": "intrinsic",
+      "single_ms_per_sample": {
+        "median": 3.405683009768836,
+        "min": 3.400785399717279,
+        "max": 3.4311071498086676
+      },
+      "batched_ms_per_sample": {
+        "median": 0.03535976982675493,
+        "min": 0.03508177003823221,
+        "max": 0.03559337987098843
+      }
+    },
+    "HiT-IDS input x gradient": {
+      "type": "post-hoc (1 backward)",
+      "single_ms_per_sample": {
+        "median": 7.515899650170468,
+        "min": 7.50139384996146,
+        "max": 7.5595741998404264
+      },
+      "batched_ms_per_sample": {
+        "median": 0.08109089976642281,
+        "min": 0.08057010010816157,
+        "max": 0.08147349988576025
+      }
+    },
+    "HiT-IDS GradientSHAP": {
+      "type": "post-hoc",
+      "single_ms_per_sample": {
+        "median": 517.795354470145,
+        "min": 515.8097691001603,
+        "max": 518.566197619657
+      },
+      "batched_ms_per_sample": {
+        "median": 515.3216445900034,
+        "min": 514.2483520298265,
+        "max": 516.8640485202195
+      }
+    },
+    "Random Forest TreeSHAP": {
+      "type": "post-hoc",
+      "single_ms_per_sample": {
+        "median": 295.1177353702951,
+        "min": 294.8336631403072,
+        "max": 295.2431470801821
+      },
+      "batched_ms_per_sample": {
+        "median": 294.6833495097235,
+        "min": 294.3733698595315,
+        "max": 294.8088782001287
+      }
+    },
+    "XGBoost TreeSHAP": {
+      "type": "post-hoc",
+      "single_ms_per_sample": {
+        "median": 8.484124350361526,
+        "min": 8.071037630434148,
+        "max": 8.573094610474072
+      },
+      "batched_ms_per_sample": {
+        "median": 0.6306484102969989,
+        "min": 0.5555529397679493,
+        "max": 0.7443736301502213
+      },
+      "note": "xgboost native TreeSHAP (pred_contribs=True)"
+    },
+    "BiLSTM GradientSHAP": {
+      "type": "post-hoc",
+      "single_ms_per_sample": {
+        "median": 1066.2736134201987,
+        "min": 1063.8812532799784,
+        "max": 1067.984447099734
+      },
+      "batched_ms_per_sample": {
+        "median": 1063.4562793700024,
+        "min": 1061.5962798398687,
+        "max": 1067.2483950300375
+      }
+    },
+    "Vanilla Transformer GradientSHAP": {
+      "type": "post-hoc",
+      "single_ms_per_sample": {
+        "median": 348.0114906304516,
+        "min": 347.3565427400172,
+        "max": 348.7721895001596
+      },
+      "batched_ms_per_sample": {
+        "median": 346.2144948600326,
+        "min": 345.4945836501429,
+        "max": 347.040783049888
+      }
+    }
+  },
+  "speedup_of_attention_rollout_vs": {
+    "HiT-IDS input x gradient": {
+      "single": 2.2068699960072373,
+      "batched": 2.293309604777616
+    },
+    "HiT-IDS GradientSHAP": {
+      "single": 152.03862279164107,
+      "batched": 14573.670787870511
+    },
+    "Random Forest TreeSHAP": {
+      "single": 86.65449324666493,
+      "batched": 8333.859381820741
+    },
+    "XGBoost TreeSHAP": {
+      "single": 2.4911667721352004,
+      "batched": 17.835195573581466
+    },
+    "BiLSTM GradientSHAP": {
+      "single": 313.0865704064962,
+      "batched": 30075.31679590684
+    },
+    "Vanilla Transformer GradientSHAP": {
+      "single": 102.18552038819173,
+      "batched": 9791.197639473032
+    }
+  }
+}

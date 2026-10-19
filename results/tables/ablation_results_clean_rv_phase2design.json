@@ -1,0 +1,98 @@
+{
+  "reference": {
+    "mean_macro_f1": 0.8588736436245077
+  },
+  "A1": {
+    "name": "No Grouping (Flat)",
+    "desc": "Flat 72-token Transformer, direct 13-class",
+    "mean_macro_f1": 0.8432511351634597,
+    "std_macro_f1": 0.032597534799457574,
+    "delta_f1": -0.015622508461047957,
+    "per_fold_f1": [
+      0.7851715117101838,
+      0.8643801742000671,
+      0.8810238270765749,
+      0.8370866807168025,
+      0.8485934821136698
+    ]
+  },
+  "A2": {
+    "name": "No Cascade (Direct 13-class)",
+    "desc": "Single model, direct 13-class",
+    "mean_macro_f1": 0.6979532512785745,
+    "std_macro_f1": 0.005287725590540143,
+    "delta_f1": -0.16092039234593314,
+    "per_fold_f1": [
+      0.697427914216427,
+      0.6986134838740998,
+      0.697856303044718,
+      0.68959526676012,
+      0.7062732884975076
+    ]
+  },
+  "A3": {
+    "name": "No Phase 2",
+    "desc": "Skip attention entropy regularization",
+    "mean_macro_f1": 0.8847119048046324,
+    "std_macro_f1": 0.025435131975976785,
+    "delta_f1": 0.025838261180124666,
+    "per_fold_f1": [
+      0.9082889850379648,
+      0.8848668570557158,
+      0.9170066485527593,
+      0.8509375849327855,
+      0.8624594484439368
+    ]
+  },
+  "A4": {
+    "name": "ReLU (not GELU)",
+    "desc": "Replace GELU with ReLU activation",
+    "mean_macro_f1": 0.87109253348915,
+    "std_macro_f1": 0.01356357891641284,
+    "delta_f1": 0.012218889864642257,
+    "per_fold_f1": [
+      0.8794255736931943,
+      0.8551027416156998,
+      0.8900031501813473,
+      0.8747877305428133,
+      0.856143471412695
+    ]
+  },
+  "A5": {
+    "name": "No SMOTE",
+    "desc": "No SMOTE, only class weights + Focal Loss",
+    "mean_macro_f1": 0.9060174606204612,
+    "std_macro_f1": 0.01865052732726763,
+    "delta_f1": 0.04714381699595349,
+    "per_fold_f1": [
+      0.8733930377985826,
+      0.9118843778699914,
+      0.9196926460561892,
+      0.9261205696392758,
+      0.898996671738267
+    ]
+  },
+  "A6": {
+    "name": "Single Head (h=1)",
+    "desc": "Single attention head instead of 8",
+    "mean_macro_f1": 0.8397779309530428,
+    "std_macro_f1": 0.01267271087988312,
+    "delta_f1": -0.019095712671464926,
+    "per_fold_f1": [
+      0.8214307550163966,
+      0.8430288161654101,
+      0.8447308106117632,
+      0.8310687534449008,
+      0.858630519526743
+    ]
+  },
+  "protocol": {
+    "data_source": "raw CSVs \u2192 clean \u2192 REAL rows only (src/data/cv_data.py)",
+    "scaling": "RobustScaler per feature group, fit on training fold only",
+    "resampling": "adaptive SMOTE + BENIGN cap 200K, training fold only (A5: none)",
+    "smoke": false,
+    "epoch_cap": null,
+    "k_folds": 5,
+    "validation_for_early_stopping": "real"
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "CIC-IDS2017_HiT-IDS": {
+    "ece": 0.05530754790351616,
+    "mce": 0.37647486339491465,
+    "n_bins": 10,
+    "n_samples": 378120,
+    "overall_accuracy": 0.9980165026975564,
+    "avg_confidence": 0.9427090883255005,
+    "bins": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.30000000000000004,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.30000000000000004,
+        "bin_hi": 0.4,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6000000000000001,
+        "count": 5209,
+        "avg_confidence": 0.5494226217269897,
+        "avg_accuracy": 0.9258974851219044,
+        "gap": 0.37647486339491465
+      },
+      {
+        "bin_lo": 0.6000000000000001,
+        "bin_hi": 0.7000000000000001,
+        "count": 2757,
+        "avg_confidence": 0.6628485321998596,
+        "avg_accuracy": 0.9361624954660863,
+        "gap": 0.2733139632662267
+      },
+      {
+        "bin_lo": 0.7000000000000001,
+        "bin_hi": 0.8,
+        "count": 10337,
+        "avg_confidence": 0.7378600835800171,
+        "avg_accuracy": 0.9851988004256554,
+        "gap": 0.24733871684563835
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "count": 10559,
+        "avg_confidence": 0.8578661680221558,
+        "avg_accuracy": 0.9977270574865044,
+        "gap": 0.1398608894643486
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "count": 349258,
+        "avg_confidence": 0.9594117403030396,
+        "avg_accuracy": 0.9999685046584473,
+        "gap": 0.04055676435540778
+      }
+    ]
+  },
+  "CIC-IDS2017_RF": {
+    "ece": 0.0011500910325816479,
+    "mce": 0.5,
+    "n_bins": 10,
+    "n_samples": 378120,
+    "overall_accuracy": 0.9986168412144293,
+    "avg_confidence": 0.9974667501818473,
+    "bins": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.30000000000000004,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.30000000000000004,
+        "bin_hi": 0.4,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "count": 3,
+        "avg_confidence": 0.5,
+        "avg_accuracy": 1.0,
+        "gap": 0.5
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6000000000000001,
+        "count": 247,
+        "avg_confidence": 0.5526217369412522,
+        "avg_accuracy": 0.5708502024291497,
+        "gap": 0.018228465487897583
+      },
+      {
+        "bin_lo": 0.6000000000000001,
+        "bin_hi": 0.7000000000000001,
+        "count": 325,
+        "avg_confidence": 0.6549921759236099,
+        "avg_accuracy": 0.7723076923076924,
+        "gap": 0.11731551638408244
+      },
+      {
+        "bin_lo": 0.7000000000000001,
+        "bin_hi": 0.8,
+        "count": 512,
+        "avg_confidence": 0.757025047421918,
+        "avg_accuracy": 0.923828125,
+        "gap": 0.166803077578082
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "count": 1312,
+        "avg_confidence": 0.8628823205608671,
+        "avg_accuracy": 0.9626524390243902,
+        "gap": 0.09977011846352313
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "count": 375721,
+        "avg_confidence": 0.9988570218957808,
+        "avg_accuracy": 0.999321304904437,
+        "gap": 0.00046428300865619665
+      }
+    ]
+  },
+  "CIC-IDS2017_XGBoost": {
+    "ece": 0.0006243870042183495,
+    "mce": 0.12304846445719397,
+    "n_bins": 10,
+    "n_samples": 378120,
+    "overall_accuracy": 0.9989738707288691,
+    "avg_confidence": 0.999566912651062,
+    "bins": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.30000000000000004,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.30000000000000004,
+        "bin_hi": 0.4,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6000000000000001,
+        "count": 48,
+        "avg_confidence": 0.5436182022094727,
+        "avg_accuracy": 0.6666666666666666,
+        "gap": 0.12304846445719397
+      },
+      {
+        "bin_lo": 0.6000000000000001,
+        "bin_hi": 0.7000000000000001,
+        "count": 40,
+        "avg_confidence": 0.6541574597358704,
+        "avg_accuracy": 0.65,
+        "gap": 0.004157459735870339
+      },
+      {
+        "bin_lo": 0.7000000000000001,
+        "bin_hi": 0.8,
+        "count": 81,
+        "avg_confidence": 0.7565041184425354,
+        "avg_accuracy": 0.691358024691358,
+        "gap": 0.06514609375117741
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "count": 176,
+        "avg_confidence": 0.8607103228569031,
+        "avg_accuracy": 0.8352272727272727,
+        "gap": 0.02548305012963037
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "count": 377775,
+        "avg_confidence": 0.9997783303260803,
+        "avg_accuracy": 0.9991952882006485,
+        "gap": 0.0005830421254318097
+      }
+    ]
+  },
+  "UNSW-NB15_HiT-IDS": {
+    "ece": 0.11008879495184709,
+    "mce": 0.34865956473203485,
+    "n_bins": 10,
+    "n_samples": 175341,
+    "overall_accuracy": 0.8517688390051386,
+    "avg_confidence": 0.8022964000701904,
+    "bins": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.30000000000000004,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.30000000000000004,
+        "bin_hi": 0.4,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "count": 0,
+        "avg_confidence": 0.0,
+        "avg_accuracy": 0.0,
+        "gap": 0.0
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6000000000000001,
+        "count": 13960,
+        "avg_confidence": 0.555412232875824,
+        "avg_accuracy": 0.7731375358166189,
+        "gap": 0.21772530294079495
+      },
+      {
+        "bin_lo": 0.6000000000000001,
+        "bin_hi": 0.7000000000000001,
+        "count": 17430,
+        "avg_confidence": 0.6536074280738831,
+        "avg_accuracy": 0.6910499139414802,
+        "gap": 0.03744248586759713
+      },
+      {
+        "bin_lo": 0.7000000000000001,
+        "bin_hi": 0.8,
+        "count": 84530,
+        "avg_confidence": 0.7771111130714417,
+        "avg_accuracy": 0.8892582515083403,
+        "gap": 0.11214713843689861
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "count": 15242,
+        "avg_confidence": 0.8211697340011597,
+        "avg_accuracy": 0.4725101692691248,
+        "gap": 0.34865956473203485
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "count": 44179,
+        "avg_confidence": 0.9806481599807739,
+        "avg_accuracy": 0.9991398628307567,
+        "gap": 0.018491702849982805
+      }
+    ]
+  }
+}

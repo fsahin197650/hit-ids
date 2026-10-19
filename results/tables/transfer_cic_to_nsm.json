@@ -1,0 +1,325 @@
+{
+  "portable_features": [
+    "Flow Duration",
+    "Fwd IAT Total",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Bwd IAT Total",
+    "Bwd IAT Mean",
+    "Bwd IAT Std",
+    "Bwd IAT Max",
+    "Bwd IAT Min",
+    "Flow IAT Mean",
+    "Flow IAT Std",
+    "Flow IAT Max",
+    "Flow IAT Min",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Std",
+    "Bwd Packet Length Max",
+    "Bwd Packet Length Min",
+    "Bwd Packet Length Mean",
+    "Bwd Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Fwd Packets/s",
+    "Bwd Packets/s",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "Packet Length Variance",
+    "Max Packet Length",
+    "Min Packet Length",
+    "Fwd Header Length",
+    "Bwd Header Length",
+    "Average Packet Size",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "URG Flag Count",
+    "CWE Flag Count",
+    "Down/Up Ratio",
+    "act_data_pkt_fwd"
+  ],
+  "n_nsm_flows": 97226,
+  "cic_in_domain_validation": {
+    "binary": {
+      "threshold": 0.5650000000000001,
+      "f1": 0.9907622511635183,
+      "precision": 0.989809952488122,
+      "detection_rate": 0.9917163840215468,
+      "fpr": 0.002074721805898956,
+      "roc_auc": 0.9997386516416769,
+      "macro_f1_binary": 0.9944414300081152
+    },
+    "macro_f1_13": 0.9344709828741701,
+    "random_forest": {
+      "threshold": 0.98,
+      "f1": 0.9912253162967382,
+      "precision": 0.9936429009771679,
+      "detection_rate": 0.9888194672804999,
+      "fpr": 0.0012855638183791077,
+      "roc_auc": 0.9991807310855886,
+      "macro_f1_binary": 0.9947237028219523
+    },
+    "xgboost": {
+      "threshold": 0.91,
+      "f1": 0.9932832315641146,
+      "precision": 0.9931432865260884,
+      "detection_rate": 0.9934232160473528,
+      "fpr": 0.0013937548327971514,
+      "roc_auc": 0.9998029617626066,
+      "macro_f1_binary": 0.9959590382164248
+    }
+  },
+  "stage1_threshold_from_cic_validation": 0.5650000000000001,
+  "normalisation": {
+    "source_scaled": {
+      "HiT-IDS": {
+        "at_cic_threshold": {
+          "threshold": 0.5650000000000001,
+          "f1": 0.6423256037255749,
+          "precision": 0.9342877094972067,
+          "detection_rate": 0.48939205501499744,
+          "fpr": 0.04423031727379553,
+          "roc_auc": 0.744218977316561,
+          "macro_f1_binary": 0.6870928335356927
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.6999794083327613,
+          "precision": 0.9345103549392144,
+          "detection_rate": 0.5595508083985661,
+          "fpr": 0.050387779083431256,
+          "roc_auc": 0.744218977316561,
+          "macro_f1_binary": 0.727481809773735
+        },
+        "per_nsm_class": {
+          "BENIGN": {
+            "n": 42550,
+            "false_positive_rate": 0.04423031727379553,
+            "most_frequent_cic_label": "DoS Slowhttptest"
+          },
+          "DoS GoldenEye": {
+            "n": 18520,
+            "detection_rate": 0.7815334773218142,
+            "type_recall_given_detected": 0.22930772419510848,
+            "most_frequent_cic_label": "DoS Slowhttptest"
+          },
+          "DoS SYN": {
+            "n": 801,
+            "detection_rate": 1.0,
+            "most_frequent_cic_label": "FTP-Patator"
+          },
+          "DoS Slowhttptest": {
+            "n": 6275,
+            "detection_rate": 0.43776892430278885,
+            "type_recall_given_detected": 0.7244266472515472,
+            "most_frequent_cic_label": "DoS Slowhttptest"
+          },
+          "DoS Slowloris": {
+            "n": 6681,
+            "detection_rate": 0.5886843286933093,
+            "type_recall_given_detected": 0.9735570811085685,
+            "most_frequent_cic_label": "DoS slowloris"
+          },
+          "FTP-Patator": {
+            "n": 96,
+            "detection_rate": 0.010416666666666666,
+            "type_recall_given_detected": 1.0,
+            "most_frequent_cic_label": "FTP-Patator"
+          },
+          "Infiltration": {
+            "n": 4073,
+            "detection_rate": 0.6012767002209674,
+            "type_recall_given_detected": 0.0,
+            "most_frequent_cic_label": "DoS Slowhttptest"
+          },
+          "PortScan": {
+            "n": 11905,
+            "detection_rate": 0.007895842083158336,
+            "type_recall_given_detected": 0.0,
+            "most_frequent_cic_label": "FTP-Patator"
+          },
+          "SSH-Patator": {
+            "n": 1368,
+            "detection_rate": 0.6388888888888888,
+            "type_recall_given_detected": 0.9965675057208238,
+            "most_frequent_cic_label": "SSH-Patator"
+          },
+          "Web Attack": {
+            "n": 4957,
+            "detection_rate": 0.27940286463586844,
+            "type_recall_given_detected": 0.0,
+            "most_frequent_cic_label": "DoS Slowhttptest"
+          }
+        }
+      },
+      "random_forest": {
+        "at_cic_threshold": {
+          "threshold": 0.98,
+          "f1": 0.06860009184358332,
+          "precision": 1.0,
+          "detection_rate": 0.03551832613943961,
+          "fpr": 0.0,
+          "roc_auc": 0.6368485514367342,
+          "macro_f1_binary": 0.3430047196597663
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.2749176686834648,
+          "precision": 0.8458855688566311,
+          "detection_rate": 0.16413051430243616,
+          "fpr": 0.03842538190364277,
+          "roc_auc": 0.6368485514367342,
+          "macro_f1_binary": 0.4542193072179314
+        }
+      },
+      "xgboost": {
+        "at_cic_threshold": {
+          "threshold": 0.91,
+          "f1": 0.1579371474617244,
+          "precision": 0.9615699100572364,
+          "detection_rate": 0.08603409174043455,
+          "fpr": 0.004418331374853114,
+          "roc_auc": 0.7516541482399167,
+          "macro_f1_binary": 0.39303102739475115
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.28556915262064186,
+          "precision": 0.9015453396831568,
+          "detection_rate": 0.16965396151876508,
+          "fpr": 0.023807285546415983,
+          "roc_auc": 0.7516541482399167,
+          "macro_f1_binary": 0.4635658130367877
+        }
+      }
+    },
+    "target_scaled": {
+      "HiT-IDS": {
+        "at_cic_threshold": {
+          "threshold": 0.5650000000000001,
+          "f1": 0.37932177497225705,
+          "precision": 0.8945686900958466,
+          "detection_rate": 0.2406906137976443,
+          "fpr": 0.03645123384253819,
+          "roc_auc": 0.796357154364491,
+          "macro_f1_binary": 0.517482420289071
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.4493192545905978,
+          "precision": 0.8841404488349619,
+          "detection_rate": 0.30119247933279686,
+          "fpr": 0.05071680376028202,
+          "roc_auc": 0.796357154364491,
+          "macro_f1_binary": 0.5580644972911718
+        },
+        "per_nsm_class": {
+          "BENIGN": {
+            "n": 42550,
+            "false_positive_rate": 0.03645123384253819,
+            "most_frequent_cic_label": "DDoS"
+          },
+          "DoS GoldenEye": {
+            "n": 18520,
+            "detection_rate": 0.12661987041036718,
+            "type_recall_given_detected": 0.00255863539445629,
+            "most_frequent_cic_label": "Web Attack"
+          },
+          "DoS SYN": {
+            "n": 801,
+            "detection_rate": 0.0
+          },
+          "DoS Slowhttptest": {
+            "n": 6275,
+            "detection_rate": 0.4404780876494024,
+            "type_recall_given_detected": 0.000361794500723589,
+            "most_frequent_cic_label": "Infiltration"
+          },
+          "DoS Slowloris": {
+            "n": 6681,
+            "detection_rate": 0.7955395898817542,
+            "type_recall_given_detected": 0.005832549388523048,
+            "most_frequent_cic_label": "Infiltration"
+          },
+          "FTP-Patator": {
+            "n": 96,
+            "detection_rate": 0.0
+          },
+          "Infiltration": {
+            "n": 4073,
+            "detection_rate": 0.007365578197888534,
+            "type_recall_given_detected": 0.0,
+            "most_frequent_cic_label": "PortScan"
+          },
+          "PortScan": {
+            "n": 11905,
+            "detection_rate": 0.0020999580008399833,
+            "type_recall_given_detected": 0.52,
+            "most_frequent_cic_label": "PortScan"
+          },
+          "SSH-Patator": {
+            "n": 1368,
+            "detection_rate": 0.0
+          },
+          "Web Attack": {
+            "n": 4957,
+            "detection_rate": 0.540851321363728,
+            "type_recall_given_detected": 0.0,
+            "most_frequent_cic_label": "DDoS"
+          }
+        }
+      },
+      "random_forest": {
+        "at_cic_threshold": {
+          "threshold": 0.98,
+          "f1": 0.0,
+          "precision": 0.0,
+          "detection_rate": 0.0,
+          "fpr": 0.0,
+          "roc_auc": 0.6352198712483729,
+          "macro_f1_binary": 0.30441563644688646
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.14865016063807682,
+          "precision": 0.5895777862305059,
+          "detection_rate": 0.08504645548321019,
+          "fpr": 0.07607520564042303,
+          "roc_auc": 0.6352198712483729,
+          "macro_f1_binary": 0.3724014930600555
+        }
+      },
+      "xgboost": {
+        "at_cic_threshold": {
+          "threshold": 0.91,
+          "f1": 0.0008775137111517368,
+          "precision": 1.0,
+          "detection_rate": 0.00043894944765527835,
+          "fpr": 0.0,
+          "roc_auc": 0.7281089450005627,
+          "macro_f1_binary": 0.30490667144713807
+        },
+        "at_0.5": {
+          "threshold": 0.5,
+          "f1": 0.027451616975993364,
+          "precision": 0.9921773142112125,
+          "detection_rate": 0.013918355402736119,
+          "fpr": 0.0001410105757931845,
+          "roc_auc": 0.7281089450005627,
+          "macro_f1_binary": 0.31977793460932696
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "total_rows": 2520798,
+  "note": "Real rows only (after inf/NaN drop and de-duplication). No SMOTE, no undersampling.",
+  "counts_15_class": {
+    "BENIGN": 2095057,
+    "Bot": 1948,
+    "DDoS": 128014,
+    "DoS GoldenEye": 10286,
+    "DoS Hulk": 172846,
+    "DoS Slowhttptest": 5228,
+    "DoS slowloris": 5385,
+    "FTP - Patator": 5931,
+    "Heartbleed": 11,
+    "Infiltration": 36,
+    "PortScan": 90694,
+    "SSH - Patator": 3219,
+    "Web Attack - Brute Force": 1470,
+    "Web Attack - Sql Injection": 21,
+    "Web Attack - XSS": 652
+  },
+  "counts_13_class_merged": {
+    "BENIGN": 2095057,
+    "Bot": 1948,
+    "DDoS": 128014,
+    "DoS GoldenEye": 10286,
+    "DoS Hulk": 172846,
+    "DoS Slowhttptest": 5228,
+    "DoS slowloris": 5385,
+    "FTP-Patator": 5931,
+    "Heartbleed": 11,
+    "Infiltration": 36,
+    "PortScan": 90694,
+    "SSH-Patator": 3219,
+    "Web Attack": 2143
+  }
+}

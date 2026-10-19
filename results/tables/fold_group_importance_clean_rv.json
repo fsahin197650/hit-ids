@@ -1,0 +1,255 @@
+{
+  "tag": "clean_rv",
+  "k_folds": 5,
+  "groups": [
+    "temporal",
+    "volume",
+    "protocol",
+    "behavioral"
+  ],
+  "classes": [
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Heartbleed",
+    "Infiltration",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack"
+  ],
+  "per_class_mean": {
+    "Bot": {
+      "temporal": 0.2523,
+      "volume": 0.1818,
+      "protocol": 0.3446,
+      "behavioral": 0.2214
+    },
+    "DDoS": {
+      "temporal": 0.1355,
+      "volume": 0.2882,
+      "protocol": 0.2685,
+      "behavioral": 0.3079
+    },
+    "DoS GoldenEye": {
+      "temporal": 0.3222,
+      "volume": 0.3247,
+      "protocol": 0.203,
+      "behavioral": 0.1501
+    },
+    "DoS Hulk": {
+      "temporal": 0.1742,
+      "volume": 0.338,
+      "protocol": 0.3329,
+      "behavioral": 0.1548
+    },
+    "DoS Slowhttptest": {
+      "temporal": 0.3321,
+      "volume": 0.2725,
+      "protocol": 0.1583,
+      "behavioral": 0.2372
+    },
+    "DoS slowloris": {
+      "temporal": 0.2675,
+      "volume": 0.262,
+      "protocol": 0.2641,
+      "behavioral": 0.2064
+    },
+    "FTP-Patator": {
+      "temporal": 0.1747,
+      "volume": 0.264,
+      "protocol": 0.3399,
+      "behavioral": 0.2214
+    },
+    "Heartbleed": {
+      "temporal": 0.1244,
+      "volume": 0.4433,
+      "protocol": 0.224,
+      "behavioral": 0.2083
+    },
+    "Infiltration": {
+      "temporal": 0.155,
+      "volume": 0.1813,
+      "protocol": 0.286,
+      "behavioral": 0.3777
+    },
+    "PortScan": {
+      "temporal": 0.2226,
+      "volume": 0.2621,
+      "protocol": 0.2872,
+      "behavioral": 0.2281
+    },
+    "SSH-Patator": {
+      "temporal": 0.1216,
+      "volume": 0.3817,
+      "protocol": 0.2919,
+      "behavioral": 0.2048
+    },
+    "Web Attack": {
+      "temporal": 0.4005,
+      "volume": 0.1934,
+      "protocol": 0.2313,
+      "behavioral": 0.1748
+    }
+  },
+  "per_class_std": {
+    "Bot": {
+      "temporal": 0.0889,
+      "volume": 0.0935,
+      "protocol": 0.0923,
+      "behavioral": 0.0302
+    },
+    "DDoS": {
+      "temporal": 0.0092,
+      "volume": 0.0372,
+      "protocol": 0.0201,
+      "behavioral": 0.033
+    },
+    "DoS GoldenEye": {
+      "temporal": 0.039,
+      "volume": 0.0363,
+      "protocol": 0.0234,
+      "behavioral": 0.0307
+    },
+    "DoS Hulk": {
+      "temporal": 0.0141,
+      "volume": 0.0332,
+      "protocol": 0.0275,
+      "behavioral": 0.0296
+    },
+    "DoS Slowhttptest": {
+      "temporal": 0.0861,
+      "volume": 0.0555,
+      "protocol": 0.0201,
+      "behavioral": 0.0422
+    },
+    "DoS slowloris": {
+      "temporal": 0.0245,
+      "volume": 0.0384,
+      "protocol": 0.0383,
+      "behavioral": 0.033
+    },
+    "FTP-Patator": {
+      "temporal": 0.0248,
+      "volume": 0.0716,
+      "protocol": 0.0646,
+      "behavioral": 0.1075
+    },
+    "Heartbleed": {
+      "temporal": 0.0442,
+      "volume": 0.0632,
+      "protocol": 0.025,
+      "behavioral": 0.0396
+    },
+    "Infiltration": {
+      "temporal": 0.0155,
+      "volume": 0.0324,
+      "protocol": 0.0487,
+      "behavioral": 0.0815
+    },
+    "PortScan": {
+      "temporal": 0.0977,
+      "volume": 0.089,
+      "protocol": 0.0447,
+      "behavioral": 0.0712
+    },
+    "SSH-Patator": {
+      "temporal": 0.0166,
+      "volume": 0.0876,
+      "protocol": 0.0414,
+      "behavioral": 0.0742
+    },
+    "Web Attack": {
+      "temporal": 0.0763,
+      "volume": 0.0276,
+      "protocol": 0.0635,
+      "behavioral": 0.0285
+    }
+  },
+  "dominant_group": {
+    "Bot": "protocol",
+    "DDoS": "behavioral",
+    "DoS GoldenEye": "volume",
+    "DoS Hulk": "volume",
+    "DoS Slowhttptest": "temporal",
+    "DoS slowloris": "temporal",
+    "FTP-Patator": "protocol",
+    "Heartbleed": "volume",
+    "Infiltration": "behavioral",
+    "PortScan": "protocol",
+    "SSH-Patator": "volume",
+    "Web Attack": "temporal"
+  },
+  "dominant_group_agreement_across_folds": {
+    "Bot": 0.6,
+    "DDoS": 0.6,
+    "DoS GoldenEye": 0.2,
+    "DoS Hulk": 0.4,
+    "DoS Slowhttptest": 0.8,
+    "DoS slowloris": 0.2,
+    "FTP-Patator": 0.6,
+    "Heartbleed": 1.0,
+    "Infiltration": 0.6666666666666666,
+    "PortScan": 0.2,
+    "SSH-Patator": 0.6,
+    "Web Attack": 0.8
+  },
+  "overall_mean": {
+    "temporal": 0.2236,
+    "volume": 0.2827,
+    "protocol": 0.2693,
+    "behavioral": 0.2244
+  },
+  "interfold_spearman_global72": {
+    "mean": 0.670021152829191,
+    "min": 0.6089899524061343,
+    "max": 0.7158646218931781,
+    "matrix": [
+      [
+        1.0,
+        0.6685,
+        0.6527,
+        0.6903,
+        0.6721
+      ],
+      [
+        0.6685,
+        1.0,
+        0.6651,
+        0.609,
+        0.7159
+      ],
+      [
+        0.6527,
+        0.6651,
+        1.0,
+        0.6631,
+        0.7056
+      ],
+      [
+        0.6903,
+        0.609,
+        0.6631,
+        1.0,
+        0.658
+      ],
+      [
+        0.6721,
+        0.7159,
+        0.7056,
+        0.658,
+        1.0
+      ]
+    ]
+  },
+  "stage1_thresholds_used": [
+    0.55,
+    0.545,
+    0.5800000000000001,
+    0.59,
+    0.645
+  ]
+}

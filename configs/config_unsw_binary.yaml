@@ -1,0 +1,136 @@
+# ============================================================================
+# HiT-IDS UNSW-NB15 — Binary Classification Config
+# Binary (Normal vs Attack) with 5-fold stratified CV
+# For Q1 revision: P3 multi-dataset in-domain evaluation
+# ============================================================================
+
+project:
+  name: "HiT-IDS-UNSW-Binary"
+  description: "UNSW-NB15 binary in-domain evaluation for Q1 revision (P3)"
+  seed: 42
+  device: "cuda"
+
+paths:
+  raw_data: "data/unsw_nb15/raw"
+  processed_data: "data/unsw_nb15/processed"
+  splits: "data/unsw_nb15/splits"
+  checkpoints: "results/unsw_nb15/checkpoints"
+  figures: "results/unsw_nb15/figures"
+  tables: "results/unsw_nb15/tables"
+  logs: "results/unsw_nb15/logs"
+
+dataset:
+  name: "UNSW-NB15"
+  label_column: "attack_cat"
+  binary_label_column: "label"        # Already 0/1 in raw CSV
+  drop_columns:
+    - "id"
+  # Binary: Normal (0) vs Attack (1)
+  num_classes: 2
+  class_names:
+    - "Normal"
+    - "Attack"
+  # Multi-class map (used for preprocessing, converted to binary later)
+  label_map:
+    "Normal": 0
+    "Analysis": 1
+    "Backdoor": 2
+    "DoS": 3
+    "Exploits": 4
+    "Fuzzers": 5
+    "Generic": 6
+    "Reconnaissance": 7
+    "Shellcode": 8
+    "Worms": 9
+  # Categorical columns to one-hot encode
+  categorical_columns:
+    - "proto"
+    - "service"
+    - "state"
+
+# Feature Groups for UNSW-NB15 (domain-expert assignment)
+# Based on UNSW-NB15 feature documentation
+feature_groups:
+  # G1: Temporal / Timing features
+  temporal:
+    - "dur"
+    - "sinpkt"
+    - "dinpkt"
+    - "sjit"
+    - "djit"
+    - "tcprtt"
+    - "synack"
+    - "ackdat"
+    - "rate"
+
+  # G2: Volume / Size features
+  volume:
+    - "spkts"
+    - "dpkts"
+    - "sbytes"
+    - "dbytes"
+    - "sload"
+    - "dload"
+    - "sloss"
+    - "dloss"
+    - "smean"
+    - "dmean"
+    - "trans_depth"
+    - "response_body_len"
+
+  # G3: Protocol / Connection features
+  protocol:
+    - "sttl"
+    - "dttl"
+    - "swin"
+    - "dwin"
+    - "stcpb"
+    - "dtcpb"
+    - "is_ftp_login"
+    - "ct_ftp_cmd"
+    - "ct_flw_http_mthd"
+    # One-hot encoded columns will be added dynamically for:
+    # proto, service, state
+
+  # G4: Behavioral / Connection-pattern features
+  behavioral:
+    - "ct_srv_src"
+    - "ct_state_ttl"
+    - "ct_dst_ltm"
+    - "ct_src_dport_ltm"
+    - "ct_dst_sport_ltm"
+    - "ct_dst_src_ltm"
+    - "ct_src_ltm"
+    - "ct_srv_dst"
+    - "is_sm_ips_ports"
+
+# Model config — same hyperparameters as CIC-IDS2017 (no re-tuning)
+model:
+  d_emb: 64
+  nhead: 4
+  intra_group_layers: 2
+  inter_group_layers: 2
+  dim_feedforward: 128
+  dropout: 0.1
+
+training:
+  batch_size: 256
+  epochs: 150
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 30
+  focal_gamma: 4.5
+  warmup_epochs: 5
+
+# CV settings
+cv:
+  n_folds: 5
+  smote_k_neighbors: 5   # auto-adjusted if class too small
+
+# Baselines to compare
+evaluation:
+  baselines:
+    - "random_forest"
+    - "xgboost"
+    - "bilstm"
+    - "vanilla_transformer"
