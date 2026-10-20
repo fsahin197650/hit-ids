@@ -32,7 +32,7 @@ METHODS = [("attention", "attention rollout", "C0"), ("gradient", "input gradien
 
 def save(fig, out, name):
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(out, f"{name}.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(out, f"{name}.{ext}"), dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -86,7 +86,7 @@ def latency(out):
              ("HiT-IDS input x gradient", "HiT-IDS input × gradient"),
              ("XGBoost TreeSHAP", "XGBoost TreeSHAP"),
              ("Random Forest TreeSHAP", "Random Forest TreeSHAP"),
-             ("Vanilla Transformer GradientSHAP", "Vanilla Transformer GradientSHAP"),
+             ("Vanilla Transformer GradientSHAP", "Flat Transformer GradientSHAP"),
              ("HiT-IDS GradientSHAP", "HiT-IDS GradientSHAP"),
              ("BiLSTM GradientSHAP", "BiLSTM GradientSHAP")]
     labels = [l for k, l in order if k in d]

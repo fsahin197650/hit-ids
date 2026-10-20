@@ -153,7 +153,7 @@ def plot_reliability_diagram(
 
     ax1.plot([0, 1], [0, 1], "k--", alpha=0.5, label="Perfect calibration")
     ax1.set_xlabel("Mean Predicted Confidence", fontsize=11)
-    ax1.set_ylabel("Fraction of Positives (Accuracy)", fontsize=11)
+    ax1.set_ylabel("Observed accuracy in bin", fontsize=11)
     ax1.set_title(title, fontsize=12)
     ax1.legend(fontsize=9)
     ax1.set_xlim(0, 1)
@@ -169,7 +169,7 @@ def plot_reliability_diagram(
     ax2.bar(bin_mids, counts, width=width, alpha=0.7, color="steelblue")
     ax2.set_xlabel("Confidence", fontsize=11)
     ax2.set_ylabel("Count", fontsize=11)
-    ax2.set_title("Confidence Distribution", fontsize=12)
+    ax2.set_title(f"Confidence distribution of {first_model}", fontsize=12)
     ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
@@ -282,7 +282,7 @@ def main():
     # ── Plot reliability diagram ──
     if cal_for_plot:
         fig_path = os.path.join(PROJECT_ROOT, args.fig_out)
-        plot_reliability_diagram(cal_for_plot, fig_path, "Reliability Diagram — HiT-IDS")
+        plot_reliability_diagram(cal_for_plot, fig_path, "Reliability diagrams (10 bins): Stage-1 HiT-IDS detector and tree ensembles")
 
     # ── Save ──
     out_path = os.path.join(PROJECT_ROOT, args.out)

@@ -7,7 +7,7 @@ FIG = {1: [f"{F}/fig1_architecture.png"], 2: [f"{F}/clean_rv_thr/per_class_f1_mo
        7: [f"{F}/scirep/transfer_per_class.png"], 8: [f"{F}/clean_rv_thr/threshold_sweep.png"]}
 SUPP = [("S1", [f"{F}/clean_rv_thr/roc_per_class_hit_ids.png", f"{F}/clean_rv_thr/pr_per_class_hit_ids.png"]),
         ("S2", [f"{F}/clean_rv/group_importance_folds.png"]), ("S3", [f"{F}/clean_rv_thr/fig_attention_divergence.png"]),
-        ("S4", [f"{F}/clean_rv_thr/xcs_distribution.png"]), ("S5", [f"{F}/reliability_diagram.png"]), ("S6", [f"{F}/robustness_feature_noise.png"])]
+        ("S4", [f"{F}/clean_rv_thr/xcs_distribution.png"]), ("S5", [f"{F}/reliability_diagram.png"])]
 TITLE = """---
 title: "HiT-IDS: hierarchical attention explanations for flow-based intrusion detection, validated for faithfulness, cost and stability"
 author: "Fatih Şahin"

@@ -222,7 +222,7 @@ def main():
     ax.legend(fontsize=7)
     ax.grid(axis="y", alpha=0.3)
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(fig_dir, f"attribution_stability.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(fig_dir, f"attribution_stability.{ext}"), dpi=300, bbox_inches="tight")
     print(f"  wrote {tp}")
 
 

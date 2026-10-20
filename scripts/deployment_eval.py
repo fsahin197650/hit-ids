@@ -111,7 +111,7 @@ def main():
     ax1.legend(h1 + h2, l1 + l2, fontsize=8, loc="lower center")
     ax1.set_title(f"Stage-1 threshold sweep (t* = {t_star:.3f} chosen on validation)")
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(args.fig_dir, f"threshold_sweep.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(args.fig_dir, f"threshold_sweep.{ext}"), dpi=300, bbox_inches="tight")
 
     a, c = res["argmax_0.5"], res["calibrated"]
     print(f"\n  t* = {t_star:.3f}   val macro-F1 {out['val_macro_f1_at_0.5']:.4f} -> {out['val_macro_f1_at_threshold']:.4f}")

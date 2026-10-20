@@ -32,7 +32,7 @@ from sklearn.metrics import (auc, precision_recall_curve, roc_curve,
 
 DISPLAY = {
     "HiT-IDS_Cascade": "HiT-IDS", "random_forest": "Random Forest", "xgboost": "XGBoost",
-    "bilstm": "BiLSTM", "vanilla_transformer": "Vanilla Transformer", "cnn_1d": "1D-CNN",
+    "bilstm": "BiLSTM", "vanilla_transformer": "Flat Transformer", "cnn_1d": "1D-CNN",
 }
 PLOT_MODELS = ["HiT-IDS_Cascade", "random_forest", "xgboost", "bilstm", "vanilla_transformer"]
 
@@ -52,7 +52,7 @@ def load_preds(pred_dir, model_key):
 
 def save(fig, out_dir, name):
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(out_dir, f"{name}.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(out_dir, f"{name}.{ext}"), dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -110,7 +110,7 @@ def plot_per_class_f1(cv, out_dir):
     names = cv["class_names"]
     S = cv["summary"]
     keys = [("HiT-IDS (Cascade)", "HiT-IDS"), ("random_forest", "Random Forest"),
-            ("xgboost", "XGBoost"), ("bilstm", "BiLSTM"), ("vanilla_transformer", "Vanilla Tr.")]
+            ("xgboost", "XGBoost"), ("bilstm", "BiLSTM"), ("vanilla_transformer", "Flat Transformer")]
     keys = [(k, n) for k, n in keys if k in S and S[k].get("per_class")]
     x = np.arange(len(names))
     w = 0.8 / max(len(keys), 1)
@@ -123,7 +123,7 @@ def plot_per_class_f1(cv, out_dir):
     ax.set_xticklabels(names, rotation=35, ha="right", fontsize=8)
     ax.set_ylabel("F1 (mean ± std over folds)")
     ax.set_ylim(0, 1.05)
-    ax.legend(fontsize=8, ncol=len(keys))
+    ax.legend(fontsize=8, ncol=len(keys), loc="upper center", bbox_to_anchor=(0.5, -0.32), frameon=False)
     ax.set_title("Per-class F1 on real test folds")
     save(fig, out_dir, "per_class_f1_models")
 

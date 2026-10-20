@@ -22,7 +22,7 @@ METHODS = [("attention", "attention rollout", "C0"), ("gradient", "input gradien
 
 def save(fig, name):
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(OUT, f"{name}.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(OUT, f"{name}.{ext}"), dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -66,13 +66,19 @@ def transfer():
     dr = [pc[c]["detection_rate"] for c in cls]
     fig, ax = plt.subplots(figsize=(8, 3.6))
     cols = ["C0" if "type_recall_given_detected" in pc[c] else "0.6" for c in cls]
-    ax.bar(range(len(cls)), dr, color=cols)
+    bars = ax.bar(range(len(cls)), dr, color=cols)
+    for b, c in zip(bars, cls):
+        if "type_recall_given_detected" in pc[c]:
+            b.set_label("attack type also present in CIC-IDS2017"); break
+    for b, c in zip(bars, cls):
+        if "type_recall_given_detected" not in pc[c]:
+            b.set_label("no CIC-IDS2017 counterpart (detected as some attack)"); break
     for i, c in enumerate(cls):
         if "type_recall_given_detected" in pc[c]:
             ax.text(i, dr[i] + 0.02, f"type {pc[c]['type_recall_given_detected']:.2f}", ha="center", fontsize=7)
     ax.set_xticks(range(len(cls))); ax.set_xticklabels(cls, rotation=30, ha="right", fontsize=8)
     ax.set_ylabel("detection rate on NSM (zero-shot)"); ax.set_ylim(0, 1.1)
-    ax.axhline(pc["BENIGN"]["false_positive_rate"], color="C3", ls="--", lw=0.8, label=f"benign false-positive rate {pc['BENIGN']['false_positive_rate']:.2f}")
+    ax.axhline(pc["BENIGN"]["false_positive_rate"], color="C3", ls="--", lw=0.8, label=f"benign false-positive rate {pc['BENIGN']['false_positive_rate']:.3f}")
     ax.legend(fontsize=8); ax.grid(axis="y", alpha=0.3)
     ax.set_title("HiT-IDS trained on CIC-IDS2017 (48 portable features), applied to NSM-IDS-2026 without retraining", fontsize=9)
     save(fig, "transfer_per_class")

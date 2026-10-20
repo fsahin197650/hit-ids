@@ -143,7 +143,7 @@ def main():
     ax.set_title(f"Group importance per attack type (mean ± std over {K} fold models)")
     fig.colorbar(im, ax=ax, label="attention rollout group importance")
     for ext in ("png", "pdf"):
-        fig.savefig(os.path.join(fig_dir, f"group_importance_folds.{ext}"), dpi=200, bbox_inches="tight")
+        fig.savefig(os.path.join(fig_dir, f"group_importance_folds.{ext}"), dpi=300, bbox_inches="tight")
     print(f"\n  inter-fold Spearman of 72-d importance: mean {off.mean():.3f} (min {off.min():.3f})")
     print(f"  dominant-group agreement across folds: {out['dominant_group_agreement_across_folds']}")
     print(f"  wrote {tp}")
